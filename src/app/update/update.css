@@ -1,0 +1,417 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 4.5px 90px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+header .logo .menu svg{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.logo-img{
+    width: 100px;
+    height: 34px;
+}
+.logo-img img{
+    width: 100%;
+    height: 100%;
+}
+.ticket-Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    overflow: hidden;
+    width: 110px;
+    cursor: pointer;
+}
+.ticket-Logo .text{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 17px 2px;
+    color: var(--main-color);
+}
+.ticket-Logo .text::before{
+    position: absolute;
+    content: " ";
+    height: 14px;
+    width: 14px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8.5px;
+}
+.ticket-Logo  .cups-container{
+    position: relative;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 1px;
+}
+.ticket-Logo  .cups-container span{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--main-color);
+}
+.ticket-Logo  .cups-container span.cup1{
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup2{
+    top: 5px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup3{
+    top: 10px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup4{
+    top: 15px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup5{
+    top: 20px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup6{
+    top: 25px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup7{
+    top: 30px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup8{
+    top: 35px;
+    right: 0;
+}
+.ticket-Logo  .part{
+    width: 13px;
+    height: 100%;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+header nav ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--white-color);
+    cursor: pointer;
+    position: relative;
+    padding: 1rem 0;
+}
+header nav ul li svg{
+    font-size: 5px;
+}
+header nav ul li p{
+    font-size: 13px;
+    margin: 0;
+    color: var(--white-color);
+}
+.drop:hover .dropdown{
+    display: block;
+}
+.drop .dropdown:hover{
+    display: block;
+}
+.dropdown {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    display: none;
+}
+.dropdown .lang{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+.dropdown .lang:nth-of-type(1){
+    border-bottom: 1px solid #eee;
+}
+.dropdown .lang img{
+    width: 22px;
+    height: 13px;
+}
+.dropdown .lang .lang-name{
+    font-size: 11px;
+    color: black;
+
+}
+.dropdown .lang .lang-name.ar{
+    font-size: 13px;
+}
+@media (max-width:815px) {
+    header nav ul li p{
+        display: none;
+    }
+    header{
+        padding: 0 5%;
+        background-color: #000;
+    }
+    .dropdown{
+        bottom: -2.5rem;
+    }
+    header nav ul{
+        gap: .5rem;
+    }
+     header nav ul li{
+        padding-right: .5rem;
+    }
+        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: white;
+    }
+    .ticket-Logo{
+        height: 28px;
+        width: 88px;
+    }
+    .ticket-Logo .text::before{
+        background-color: #000;
+        left: -16px;
+    }
+    .ticket-Logo  .cups-container span{
+        background-color: #000;
+    }
+    .ticket-Logo .text{
+        padding: 0 13px 0;
+        font-size: 14px;
+    }
+    .ticket-Logo .part{
+        width: 4px;
+    }
+
+}
+.update .update-content{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    background-color: rgb(235, 235, 235);
+    height: 100vh;
+}
+.update .update-content .head{
+    padding: 1.8rem 0;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
+.update .update-content p{
+font-size: clamp(14px, 4vw, 16px);
+    color: #616161;
+   margin-top: .5rem;
+}
+.update .update-content .head h2{
+    font-size: clamp(23px, 4vw, 28px);
+    font-weight: 700;
+}
+.update .update-content .data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1.8rem;
+    width: 100%;
+    border-top: 1px solid rgba(185, 185, 185, 0.877);
+}
+.update .update-content .data .content{
+    width: 40%;
+}
+.update .update-content .data .content p{
+    font-weight: bold;
+    color: #616161;
+font-size: clamp(13px, 4vw, 15px);
+    margin-bottom: 7px;
+}
+.update .update-content .data .content .input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+    padding: .7rem;
+    background-color: var(--white-color);
+    margin-bottom: 1rem;
+}
+.update .update-content .data .content .input input{
+    width: 100%;
+    /* padding: .4rem; */
+    border: none;
+    outline: none;
+    
+}
+.update .update-content .data .content  .info{
+    display: flex;
+    justify-content: space-between;
+}
+.update .update-content .data .content  .info p{
+    font-weight: bold;
+    color: #616161;
+    font-size: 15px;
+    margin-bottom: 7px;
+    
+
+}
+.update .update-content .data .content  .info .forget{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.update .update-content .data .content  .info .forget p{
+    color: rgb(161, 161, 161);
+    font-size: 10px;
+    font-weight: 300;
+}
+.update .update-content .data .content .have{
+    font-size: 14px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.update .update-content .data .content .have p{
+        font-size: 14px;
+        font-weight: 400;
+}
+.update .update-content .data .content .have span{
+    padding-left: 1rem;
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+.update .update-content .data .content button{
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: .6rem 2rem .7rem;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.update .update-content .data .content button:hover{
+   background-color: rgb(31, 121, 56); 
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363636;
+    padding: 30px 90px 22px;
+}
+footer  nav {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul li{
+    list-style: none;
+    color: var(--white-color);
+    font-size: 14px;
+}
+footer p{
+    color: var(--white-color);
+    font-size: 14px;
+}
+footer  nav .footlogo .text{
+     color: var(--white-color);
+}
+footer  nav .footlogo .text::before{
+     background-color: #363636;
+}
+footer  nav .footlogo .cups-container{
+     background-color: #363636;
+}
+footer  nav .footlogo .cups-container span{
+     background-color: #363636;
+}
+@media  (max-width: 576px){
+    footer{
+        padding: 15px 20px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+
+}
+@media  (max-width: 576px){
+    .update .update-content .data .content{
+        width: 90%;
+     }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .update .update-content .data .content{
+        width: 70%;
+     }
+}
+

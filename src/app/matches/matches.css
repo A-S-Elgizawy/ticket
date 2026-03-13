@@ -1,0 +1,741 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 4.5px 90px;
+
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+header .logo .menu svg{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.logo-img{
+    width: 100px;
+    height: 34px;
+}
+.logo-img img{
+    width: 100%;
+    height: 100%;
+}
+.ticket-Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    overflow: hidden;
+    width: 110px;
+    cursor: pointer;
+}
+.ticket-Logo .text{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 17px 2px;
+    color: var(--main-color);
+}
+.ticket-Logo .text::before{
+    position: absolute;
+    content: " ";
+    height: 14px;
+    width: 14px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8.5px;
+}
+.ticket-Logo  .cups-container{
+    position: relative;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 1px;
+}
+.ticket-Logo  .cups-container span{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--main-color);
+}
+.ticket-Logo  .cups-container span.cup1{
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup2{
+    top: 5px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup3{
+    top: 10px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup4{
+    top: 15px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup5{
+    top: 20px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup6{
+    top: 25px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup7{
+    top: 30px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup8{
+    top: 35px;
+    right: 0;
+}
+.ticket-Logo  .part{
+    width: 13px;
+    height: 100%;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+header nav ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--white-color);
+    cursor: pointer;
+    position: relative;
+    padding: 1rem 0;
+}
+header nav ul li svg{
+    font-size: 5px;
+}
+header nav ul li p{
+    font-size: 13px;
+    margin: 0;
+    color: var(--white-color);
+}
+.drop:hover .dropdown{
+    display: block;
+}
+.drop .dropdown:hover{
+    display: block;
+}
+.dropdown {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    display: none;
+    transition: .1s ease;
+}
+.dropdown .lang{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+.dropdown .lang:nth-of-type(1){
+    border-bottom: 1px solid #eee;
+}
+.dropdown .lang img{
+    width: 22px;
+    height: 13px;
+}
+.dropdown .lang .lang-name{
+    font-size: 11px;
+    color: black;
+
+}
+.dropdown .lang .lang-name.ar{
+    font-size: 13px;
+}
+@media (max-width:815px) {
+    header nav ul li p{
+        display: none;
+    }
+    header{
+        padding: 0 5%;
+        background-color: #000;
+    }
+    .dropdown{
+        bottom: -2.5rem;
+    }
+    header nav ul{
+        gap: .5rem;
+    }
+     header nav ul li{
+        padding-right: .5rem;
+    }
+        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: white;
+    }
+    .ticket-Logo{
+        height: 28px;
+        width: 88px;
+    }
+    .ticket-Logo .text::before{
+        background-color: #000;
+        left: -16px;
+    }
+    .ticket-Logo  .cups-container span{
+        background-color: #000;
+    }
+    .ticket-Logo .text{
+        padding: 0 13px 0;
+        font-size: 14px;
+    }
+    .ticket-Logo .part{
+        width: 4px;
+    }
+
+}
+
+.match{
+     background-color: rgb(235, 235, 235);
+}
+.match .content{
+    padding: 1rem 8% 2.5rem;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.search h2{
+    font-size: clamp(20px,4vw,24px);
+    font-weight: bold;
+    margin: 1rem;
+}
+.search .selects-con{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search .selects-con .item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.search .selects-con .item label{
+    font-size: 12px;
+}
+.search .searchBtn {
+    padding: .5rem 1rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: #2697d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+}
+.search .searchBtn.md{
+    display: none;
+}  
+nz-select {
+    height: 42px !important;
+    font-size: 13px !important;
+}
+.search .selects-con .item:nth-of-type(4) nz-select{
+    width: 210px;
+}
+.search .selects-con .item:nth-of-type(3) nz-select{
+    width: 160px;
+}
+.search .selects-con .item:nth-of-type(2) nz-select{
+    width: 130px;
+}
+.search .selects-con .item:nth-of-type(1) nz-select{
+    width: 110px;
+}
+@media  (max-width: 915px){
+.search{
+    flex-direction: column;
+}
+.search .md-screen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.search .searchBtn.md{
+    display: block;
+}
+.search nz-select {
+    width: 100% !important;
+}
+
+.search .selects-con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 0rem;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.search .selects-con.active{
+    height: 25rem;
+}
+.search .selects-con .item{
+    width: 100%;
+}
+.search .searchBtn.lg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* display: block; */
+
+}
+}
+.match .content .cups{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    
+}
+.match .content .cups .cupItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.match .content .cups .cupItem .img-con{
+   width: 100px;
+   height: 100px;
+   background-color: var(--white-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1rem;
+   border-radius: 50%;
+   position: relative;
+   transition: .3s ease;
+   cursor: pointer;
+}
+.match .content .cups .cupItem .img-con::before{
+    position: absolute;
+    content: " ";
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    opacity: 0;
+}
+.match .content .cups .cupItem .img-con::after{
+    position: absolute;
+    content: " ";
+    width: 13px;
+    height: 13px;
+    background-color: var(--white-color);
+    bottom: 3px;
+    border-right: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    opacity: 0;
+}
+.match .content .cups .cupItem .img-con img{
+    width: 50px;
+    height: 50px;
+}
+.match .content .cups .cupItem p{
+    font-size: 16px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+.match .content .cups .cupItem:hover .img-con::before{
+    opacity: 1;
+}
+.match .content .cups .cupItem:hover .img-con::after{
+    opacity: 1;
+}
+.match .content .cups .cupItem:hover p{
+    color: var(--main-color);
+}
+.match .content .cups .cupItem.active .img-con::before{
+    opacity: 1;
+}
+.match .content .cups .cupItem.active .img-con::after{
+    opacity: 1;
+}
+.match .content .cups .cupItem.active p{
+    color: var(--main-color);
+}
+
+.match .content .tickets{
+    margin-bottom: 2rem;
+}
+.match .content .tickets .items{
+    padding: .6rem .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+}
+/* .match .content .tickets .items .item{
+    width: calc((100% - 8rem) / 4);
+} */
+.match .content .tickets .items .teams{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.match .content .tickets .items .teams .logos{
+    position: relative;
+    display: flex;
+}
+.match .content .tickets .items .teams .logos .img-con{
+    border: .5px solid rgb(192, 192, 192);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.match .content .tickets .items .teams .logos .img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.match .content .tickets .items .teams p{
+    font-weight: bold;
+    font-size: clamp(11px , 2vw, 15px);
+}
+.match .content .tickets .items .teams p span{
+    font-weight: 600;
+    font-size: 13px;
+    color: #818181;
+}
+.match .content .tickets .items .stadium{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.match .content .tickets .items .stadium .img-con{
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.match .content .tickets .items .stadium .img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.match .content .tickets .items .stadium p{
+    font-weight: 600;
+    font-size: clamp(10px,2vw,13px);
+}
+.match .content .tickets .items .stadium p span{
+    font-size: 11px;
+    color: #818181;
+}
+.match .content .tickets .items .date {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.match .content .tickets .items .date .img-con{
+    width: 38px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.match .content .tickets .items .date .img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.match .content .tickets .items .date .month{
+    font-size: clamp(10px,2vw,13px);
+    font-weight: 600;
+}
+.match .content .tickets .items .date .time{
+    color: #818181;
+    font-size: 12px;
+    font-weight: 600;
+}
+.match .content .tickets .items button{
+    padding: .5rem 3rem;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 17px;
+}
+.match .content .tickets .items2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem .8rem;
+    background-color: #f7f7f7;
+}
+.match .content .tickets .items2 p{
+    color: #424242;
+}
+.match .content .tickets .items2 span , 
+.match .content .tickets .items2 .state{
+     color: black;
+     position: relative;
+}
+.match .content .tickets .items2 .state::before{
+     position: absolute;
+     content: " ";
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background-color: var(--main-color);
+     top: 50%;
+     transform: translateY(-50%);
+     left: -20px;
+}
+.match .content .tickets .btn-sm-up{
+    width: 100%;
+    color: white;
+    background-color: var(--main-color);
+    padding: .5rem;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.match .content .tickets .items .teams2{
+    display: none;
+}
+.match .content .tickets .items .stad-date{
+    display: none;
+}
+.match .content .tickets .items2_2{
+    display: none;
+}
+@media  (max-width: 576px){
+    .match .content{
+    padding: 2.5rem 20px;
+}
+
+}
+@media  (max-width: 915px){
+    .match .content{
+    padding: 2.5rem 5%;
+}
+    .match .content .tickets .items{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .match .content .tickets .items .teams{
+        display: none;
+    }
+.match .content .tickets .items .teams2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(192, 192, 192);
+
+} 
+.match .content .tickets .items .teams2 .squad{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.match .content .tickets .items .teams2 .squad .img-con{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.match .content .tickets .items .teams2 .squad .img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.match .content .tickets .items .teams2 .squad p{
+    font-weight: bold;
+    font-size: 17px;
+}
+.match .content .tickets .items .stadium , 
+.match .content .tickets .items .date{
+    display: none;
+}
+.match .content .tickets .items .stad-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    
+}
+.match .content .tickets .items .stad-date .stadium{
+    display: flex;
+}
+.match .content .tickets .items .stad-date .date{
+    display: flex;
+}
+.match .content .tickets .items .stad-date .img-con{
+    width: 35px;
+    height: 35px;
+}
+.match .content .tickets .items .stad-date .img-con.calender{
+    height: 35.5px;
+    width: 35px;
+}
+.match .content .tickets .items2{
+    display: none;
+}
+.match .content .tickets .items2_2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding:1rem ;
+    background-color: #f7f7f7;
+}
+.match .content .tickets .items2_2 .co{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.match .content .tickets .items2_2 p{
+    color: #424242;
+}
+.match .content .tickets .items2_2 span{
+    color: black;
+}
+      .match .content .tickets .btn-lg{
+        display: none;
+      }
+      .match .content .tickets .btn-sm-up{
+        display: block;
+      }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+      .match .content .tickets .btn-lg{
+        display: none;
+      }
+      .match .content .tickets .btn-sm-up{
+        display: block;
+      }
+}
+/* =========== */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363636;
+    padding: 30px 90px 22px;
+}
+footer  nav {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul li{
+    list-style: none;
+    color: var(--white-color);
+    font-size: 12px;
+}
+footer p{
+    color: var(--white-color);
+    font-size: 12px;
+}
+footer  nav .ticket-Logo{
+     background-color: var(--main-color);
+}
+footer  nav .ticket-Logo .text{
+     color: var(--white-color);
+}
+footer  nav .ticket-Logo .text::before{
+     background-color: #363636;
+}
+footer  nav .ticket-Logo .cups-container{
+     background-color: #363636;
+}
+footer  nav .ticket-Logo .cups-container span{
+     background-color: #363636;
+}
+@media  (max-width: 576px){
+    footer{
+        padding: 15px 20px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+
+}

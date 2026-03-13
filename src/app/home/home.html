@@ -1,0 +1,179 @@
+<!-- <section *transloco="let t">
+  <h1>{{t('welcom')}}</h1>
+  <p>{{t('description' , {name : 'lokalise'})}}</p>
+</section> -->
+<div *transloco="let t">
+<div class="sidebar" [class.active]="isActive" [class.removeActive]="removeActive">
+   <div class="content">
+    <div class="icon-con x" (click)="closeMenu()">
+      <!-- <i class="fa-solid fa-x"></i> -->
+       <span class="one"></span>
+       <span class="two"></span>
+       <span class="three"></span>
+    </div>
+    <nav>
+      <ul>
+        <div class="licon" style="--i:2; --x:8;"  routerLink="/home" (click)="closeMenul()">
+          <li>{{t ('home.Home')}}</li>
+        </div>
+        <div class="licon" style="--i:3;--x:7;"  routerLink="/stadium" (click)="closeMenul()">
+        <li>{{t ('home.Stadium')}}</li>
+        </div>
+        <div class="licon" style="--i:4;--x:6;"  routerLink="/story" (click)="closeMenul()">
+        <li>{{t ('home.Stores')}}</li>
+        </div>
+        <div class="licon" style="--i:5;--x:5;"  routerLink="/faq" (click)="closeMenul()">
+        <li>{{t ('home.FAQ')}}</li>
+        </div>
+        <div class="licon" style="--i:6;--x:4;"  routerLink="/about" (click)="closeMenul()">
+        <li>{{t ('home.About')}}</li>
+        </div>
+        <div class="licon" style="--i:7;--x:3;"  routerLink="/contact" (click)="closeMenul()">
+        <li>{{t ('home.Contact')}}</li>
+        </div>
+      </ul> 
+    </nav>
+    <div class="social">
+      <div class="icon-con" style="--z:4;--r:3">
+          <i class="fa-brands fa-facebook-f"></i>
+      </div>
+      <div class="icon-con" style="--z:3;--r:2">
+          <i class="fa-brands fa-twitter"></i>  
+      </div>
+      <div class="icon-con" style="--z:2;--r:4">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+   </div>
+</div>
+<div class="background">
+  <header>
+    <div class="logo">
+        <div class="menu" (click)="closeMenu()">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+          fill="currentColor" viewBox="0 0 24 24" >
+          <path d="M3 5h18v2H3zm0 6h13v2H3zm0 6h8v2H3z"></path>
+          </svg>
+        </div>
+        <!-- <div class="ticket-Logo" routerLink="/home">
+        <div class="text">Ticket</div>
+        <div class="cups-container">
+          <span class="cup1"></span>
+          <span class="cup2"></span>
+          <span class="cup3"></span>
+          <span class="cup4"></span>
+          <span class="cup5"></span>
+          <span class="cup6"></span>
+          <span class="cup7"></span>
+          <span class="cup8"></span>
+        </div>
+        <div class="part"></div>
+      </div> -->
+         <div class="logo-img" routerLink="/home">
+          <img src="https://www.tazkarti.com/assets/images/tazkarti.svg" alt="">
+         </div>
+    </div> 
+    <nav>
+      <ul>
+        <li routerLink="/Register">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="29" height="24"  
+            fill="currentColor" viewBox="0 0 23 23" >
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M22 11h-3V8h-2v3h-3v2h3v3h2v-3h3zM4 8c0 2.28 1.72 4 4 4s4-1.72 4-4-1.72-4-4-4-4 1.72-4 4m6 0c0 1.18-.82 2-2 2s-2-.82-2-2 .82-2 2-2 2 .82 2 2M3 20h10c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5H7c-2.76 0-5 2.24-5 5v1c0 .55.45 1 1 1m4-5h2c1.65 0 3 1.35 3 3H4c0-1.65 1.35-3 3-3"></path>
+            </svg>
+            <p>{{t ('home.l1')}}</p>
+        </li>
+        <li routerLink="/sign">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="22" height="22"  
+            fill="currentColor" viewBox="0 0 25 25" >
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M6 22h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2h-1V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2M9 7c0-1.65 1.35-3 3-3s3 1.35 3 3v2H9zm-3 4h12v9H6z"></path>
+            </svg>
+            <p>{{t ('home.l2')}}</p>
+        </li>
+        <li routerLink="/update">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20"  
+            fill="currentColor" viewBox="0 0 27 27" >
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M16 16H2v2h14v4l6-5-6-5zM8 1 2 6l6 5V7h14V5H8z"></path>
+            </svg>
+            <p>{{t ('home.l3')}}</p>
+        </li>
+        <li class="drop">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+            fill="currentColor" viewBox="0 0 24 24" >
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m5.66 4.35c-.72.17-1.45.3-2.19.4-.18-.83-.42-1.59-.7-2.25a8.05 8.05 0 0 1 2.89 1.85M12 20c-.31 0-.97-1-1.45-2.94.96-.05 1.93-.05 2.9 0C12.97 19 12.31 20 12 20m-1.81-4.93c-.08-.63-.14-1.32-.17-2.07h3.96c-.03.75-.09 1.44-.17 2.07-1.2-.08-2.42-.08-3.62 0M12 4c.31 0 .97 1 1.45 2.94-.96.05-1.93.05-2.9 0C11.03 5 11.69 4 12 4m0 5c.61 0 1.21-.03 1.81-.06.08.63.14 1.32.17 2.06h-3.96c.03-.75.09-1.43.17-2.06.6.04 1.2.06 1.81.06m-3.98 2H4.07c.13-1.05.47-2.04.97-2.92 1.03.28 2.09.51 3.16.66-.09.74-.15 1.5-.18 2.27Zm0 2c.03.77.09 1.53.18 2.27-1.08.15-2.13.38-3.16.65-.5-.88-.84-1.87-.97-2.93h3.95Zm7.96 0h3.95a8 8 0 0 1-.97 2.93c-1.03-.28-2.09-.5-3.16-.65.09-.74.15-1.51.18-2.27Zm0-2c-.03-.76-.09-1.53-.18-2.27 1.08-.15 2.13-.38 3.16-.66.5.88.83 1.87.97 2.92h-3.95ZM9.24 4.5c-.28.66-.52 1.43-.7 2.25-.74-.1-1.47-.24-2.19-.4.81-.81 1.8-1.44 2.89-1.85M6.35 17.65c.72-.17 1.45-.3 2.19-.4.18.83.42 1.59.7 2.25a8.05 8.05 0 0 1-2.89-1.85m8.42 1.85c.28-.66.52-1.43.7-2.25.74.1 1.47.24 2.19.4-.81.81-1.8 1.44-2.89 1.85"></path>
+            </svg>
+            <p>{{t ('home.l4')}}</p>
+                        <div class="dropdown">
+              <div class="lang"
+                  *ngFor="let lang of languages"
+                  (click)="changeLang(lang)"
+                  [class.active]="lang === currentLang">
+                <img
+                  [src]="lang === 'ar'
+                  ? 'https://www.tazkarti.com/assets/images/lang-flag3.svg'
+                  : 'https://www.tazkarti.com/assets/images/lang-flag1.svg'"
+                  alt=""
+                >
+                <p class="lang-name">
+                  {{ lang === 'ar' ? 'العربية' : 'English' }}
+                </p>
+              </div>
+            </div>
+        </li>
+      </ul>
+    </nav>
+  
+  </header>
+<div class="heading">
+  <div class="text">
+    <h2>{{t ('home.h2')}}</h2>
+    <p>{{t ('home.p1')}}</p>
+  </div>
+  <div class="fields">
+    <div class="field sports">
+      <div class="icon-con">
+      <!-- <svg  xmlns="http://www.w3.org/2000/svg" width="60" height="60"  
+      fill="white" viewBox="0 0 24 24" >
+      <path d="m22 5-5-2v4.42c-1.34-.24-2.75-.36-4-.4V5.2L16 4l-5-2v5.02c-1.25.04-2.66.16-4 .4V6.2L10 5 5 3v4.89c-1.73.54-3 1.37-3 2.61v8C2 21.26 8.29 22 12 22s10-.74 10-3.5v-8c0-1.24-1.27-2.07-3-2.61V6.2zM10 19.93V18h4v1.93c-.62.04-1.28.07-2 .07s-1.38-.03-2-.07m6-.21V17c0-.55-.45-1-1-1H9c-.55 0-1 .45-1 1v2.72c-2.4-.35-3.76-.96-4-1.29v-5.69c2.16.95 5.61 1.26 8 1.26s5.84-.31 8-1.26v5.69c-.24.33-1.6.94-4 1.29M12 12c-4.75 0-7.4-.99-7.94-1.5C4.6 9.99 7.25 9 12 9s7.4.99 7.94 1.5c-.54.51-3.19 1.5-7.94 1.5"></path>
+      </svg> --> 
+      <img src="https://www.tazkarti.com/assets/images/sprot-card-icon.svg" alt="">
+      </div>
+      <h4>{{t ('home.s')}}</h4>
+      <p>{{t ('home.p3')}}</p>
+    </div>
+    <div class="field enter">
+      <div class="icon-con">
+      <!-- <svg  xmlns="http://www.w3.org/2000/svg" width="60" height="60"  
+      fill="white" viewBox="0 0 24 24" >
+      <path d="M18.76 5.24A3.5 3.5 0 0 0 15.5 3c-.31 0-.63.04-.93.13a3.487 3.487 0 0 0-5.14 0C9.12 3.04 8.81 3 8.5 3c-1.47 0-2.75.91-3.26 2.24a3.498 3.498 0 0 0-1.22 5.73c0 .08-.02.15 0 .22l2 10c.09.47.5.8.98.8h10c.48 0 .89-.34.98-.8l2-10c.02-.08 0-.15 0-.22.63-.63 1.02-1.51 1.02-2.47 0-1.47-.91-2.75-2.24-3.26M6.23 7.03a.99.99 0 0 0 .8-.8c.18-.97 1.33-1.55 2.24-1 .24.14.52.18.79.11.27-.08.49-.26.62-.5a1.486 1.486 0 0 1 2.66 0c.13.25.35.43.62.5.27.08.55.04.79-.11.91-.54 2.06.03 2.24 1 .07.41.39.73.8.8a1.498 1.498 0 0 1-.27 2.97H6.5a1.498 1.498 0 0 1-.27-2.97M13.4 12l-.8 8h-1.19l-.8-8zm-7.18 0H8.6l.8 8H7.82zm9.96 8H14.6l.8-8h2.38z"></path>
+      </svg> -->
+      <img src="https://www.tazkarti.com/assets/images/otherEvents.svg" alt="">
+    </div>
+      <h4>{{t ('home.e')}}</h4>
+      <p>{{t ('home.p4')}}</p>
+    </div>
+  </div>
+  <div class="account">
+    <p class="sign" routerLink="/sign" >{{t ('home.btn1')}}</p>
+    <p>{{t ('home.or')}}</p>
+    <p class="register" routerLink="/Register">
+    <span>
+      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+      fill="currentColor" viewBox="0 0 24 24" >
+      <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+      <path d="M22 11h-3V8h-2v3h-3v2h3v3h2v-3h3zM4 8c0 2.28 1.72 4 4 4s4-1.72 4-4-1.72-4-4-4-4 1.72-4 4m6 0c0 1.18-.82 2-2 2s-2-.82-2-2 .82-2 2-2 2 .82 2 2M3 20h10c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5H7c-2.76 0-5 2.24-5 5v1c0 .55.45 1 1 1m4-5h2c1.65 0 3 1.35 3 3H4c0-1.65 1.35-3 3-3"></path>
+      </svg>
+    </span>
+    {{t ('home.btn2')}}
+    </p>
+  </div>
+</div>
+<footer>
+  <p>{{t ('home.p5')}}</p>
+  <p>{{t ('home.p6')}}</p>
+</footer>
+</div>
+</div>

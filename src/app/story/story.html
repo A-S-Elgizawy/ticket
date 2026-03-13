@@ -1,0 +1,183 @@
+
+<div *transloco="let t">
+<div class="story" >
+     <header>
+  <div class="logo">
+      <div class="menu" (click)="toggleMenu()">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+        fill="currentColor" viewBox="0 0 24 24" >
+        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+        <path d="M3 5h18v2H3zm0 6h13v2H3zm0 6h8v2H3z"></path>
+        </svg>
+      </div>
+       <!-- <div class="ticket-Logo" routerLink="/home">
+      <div class="text">Ticket</div>
+      <div class="cups-container">
+        <span class="cup1"></span>
+        <span class="cup2"></span>
+        <span class="cup3"></span>
+        <span class="cup4"></span>
+        <span class="cup5"></span>
+        <span class="cup6"></span>
+        <span class="cup7"></span>
+        <span class="cup8"></span>
+      </div>
+      <div class="part"></div>
+    </div> -->
+    <div class="logo-img" routerLink="/home">
+    <img src="https://www.tazkarti.com/assets/images/logo1.svg" alt="">
+  </div>
+  </div>
+  <nav>
+    <ul>
+      <li routerLink="/Register">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="29" height="24"  
+          fill="currentColor" viewBox="0 0 23 23" >
+          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M22 11h-3V8h-2v3h-3v2h3v3h2v-3h3zM4 8c0 2.28 1.72 4 4 4s4-1.72 4-4-1.72-4-4-4-4 1.72-4 4m6 0c0 1.18-.82 2-2 2s-2-.82-2-2 .82-2 2-2 2 .82 2 2M3 20h10c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5H7c-2.76 0-5 2.24-5 5v1c0 .55.45 1 1 1m4-5h2c1.65 0 3 1.35 3 3H4c0-1.65 1.35-3 3-3"></path>
+          </svg>
+          <p>{{t ('story.l1')}}</p>
+      </li>
+      <li routerLink="/sign">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="22" height="22"  
+          fill="currentColor" viewBox="0 0 25 25" >
+          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M6 22h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2h-1V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2M9 7c0-1.65 1.35-3 3-3s3 1.35 3 3v2H9zm-3 4h12v9H6z"></path>
+          </svg>
+          <p>{{t ('story.l2')}}</p>
+      </li>
+      <li routerLink="/update">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20"  
+          fill="currentColor" viewBox="0 0 27 27" >
+          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M16 16H2v2h14v4l6-5-6-5zM8 1 2 6l6 5V7h14V5H8z"></path>
+          </svg>
+          <p>{{t ('story.l3')}}</p>
+      </li>
+      <li class="drop">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+          fill="currentColor" viewBox="0 0 24 24" >
+          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m5.66 4.35c-.72.17-1.45.3-2.19.4-.18-.83-.42-1.59-.7-2.25a8.05 8.05 0 0 1 2.89 1.85M12 20c-.31 0-.97-1-1.45-2.94.96-.05 1.93-.05 2.9 0C12.97 19 12.31 20 12 20m-1.81-4.93c-.08-.63-.14-1.32-.17-2.07h3.96c-.03.75-.09 1.44-.17 2.07-1.2-.08-2.42-.08-3.62 0M12 4c.31 0 .97 1 1.45 2.94-.96.05-1.93.05-2.9 0C11.03 5 11.69 4 12 4m0 5c.61 0 1.21-.03 1.81-.06.08.63.14 1.32.17 2.06h-3.96c.03-.75.09-1.43.17-2.06.6.04 1.2.06 1.81.06m-3.98 2H4.07c.13-1.05.47-2.04.97-2.92 1.03.28 2.09.51 3.16.66-.09.74-.15 1.5-.18 2.27Zm0 2c.03.77.09 1.53.18 2.27-1.08.15-2.13.38-3.16.65-.5-.88-.84-1.87-.97-2.93h3.95Zm7.96 0h3.95a8 8 0 0 1-.97 2.93c-1.03-.28-2.09-.5-3.16-.65.09-.74.15-1.51.18-2.27Zm0-2c-.03-.76-.09-1.53-.18-2.27 1.08-.15 2.13-.38 3.16-.66.5.88.83 1.87.97 2.92h-3.95ZM9.24 4.5c-.28.66-.52 1.43-.7 2.25-.74-.1-1.47-.24-2.19-.4.81-.81 1.8-1.44 2.89-1.85M6.35 17.65c.72-.17 1.45-.3 2.19-.4.18.83.42 1.59.7 2.25a8.05 8.05 0 0 1-2.89-1.85m8.42 1.85c.28-.66.52-1.43.7-2.25.74.1 1.47.24 2.19.4-.81.81-1.8 1.44-2.89 1.85"></path>
+          </svg>
+          <p>{{t ('story.l4')}}</p>
+            <div class="dropdown">
+              <div class="lang"
+                  *ngFor="let lang of languages"
+                  (click)="changeLang(lang)"
+                  [class.active]="lang === currentLang">
+                <img
+                  [src]="lang === 'ar'
+                  ? 'https://www.tazkarti.com/assets/images/lang-flag3.svg'
+                  : 'https://www.tazkarti.com/assets/images/lang-flag1.svg'"
+                  alt=""
+                >
+                <p class="lang-name">
+                  {{ lang === 'ar' ? 'العربية' : 'English' }}
+                </p>
+              </div>
+            </div>
+      </li>
+    </ul>
+  </nav>
+       </header>
+       <div class="story-content">
+        <h2>{{t ('story.p1')}}</h2>
+    <!-- <div nz-flex nzVertical nzWrap="wrap" [nzGap]="16"> -->
+      <nz-collapse>
+        <nz-collapse-panel [nzHeader]="t('story.p1')" nzCollapsible="header">
+          <div class="details" >
+            <div class="item head">
+                <p>{{t ('story.a1')}}</p>
+                <p>{{t ('story.b1')}}</p>
+                <p>{{t ('story.c1')}}</p>
+                <p>{{t ('story.d1')}}</p>
+                <p class="adress">{{t ('story.e1')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a2')}}</p>
+                <p>{{t ('story.b2')}}</p>
+                <p>{{t ('story.c2')}}</p>
+                <p>{{t ('story.d2')}}</p>
+                <p class="adress">{{t ('story.e2')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a3')}}</p>
+                <p>{{t ('story.b3')}}</p>
+                <p>{{t ('story.c3')}}</p>
+                <p>{{t ('story.d3')}}</p>
+                <p class="adress">{{t ('story.e3')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a4')}}</p>
+                <p>{{t ('story.b4')}}</p>
+                <p>{{t ('story.c4')}}</p>
+                <p>{{t ('story.d4')}}</p>
+                <p class="adress">{{t ('story.e4')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a5')}}</p>
+                <p>{{t ('story.b5')}}</p>
+                <p>{{t ('story.c5')}}</p>
+                <p>{{t ('story.d5')}}</p>
+                <p class="adress">{{t ('story.e5')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a6')}}</p>
+                <p>{{t ('story.b6')}}</p>
+                <p>{{t ('story.c6')}}</p>
+                <p>{{t ('story.d6')}}</p>
+                <p class="adress">{{t ('story.e6')}}</p>
+            </div>
+            <div class="item">
+                <p>{{t ('story.a7')}}</p>
+                <p>{{t ('story.b7')}}</p>
+                <p>{{t ('story.c7')}}</p>
+                <p>{{t ('story.d7')}}</p>
+                <p class="adress">{{t ('story.e7')}}</p>
+            </div>
+            <div class="item last">
+                <p>{{t ('story.a8')}}</p>
+                <p>{{t ('story.b8')}}</p>
+                <p>{{t ('story.c8')}}</p>
+                <p>{{t ('story.d8')}}</p>
+                <p class="adress">{{t ('story.e8')}}</p>
+            </div>
+          </div>
+        </nz-collapse-panel>
+      </nz-collapse>
+    <!-- </div> -->
+    </div>
+  </div>
+  <footer>
+  <nav>
+    <!-- <div class="ticket-Logo" routerLink="/home">
+    <div class="text">Ticket</div>
+    <div class="cups-container">
+      <span class="cup1"></span>
+      <span class="cup2"></span>
+      <span class="cup3"></span>
+      <span class="cup4"></span>
+      <span class="cup5"></span>
+      <span class="cup6"></span>
+      <span class="cup7"></span>
+      <span class="cup8"></span>
+    </div>
+    <div class="part"></div>
+  </div> -->
+          <div class="logo-img footlogo" routerLink="/home">
+          <img src="https://www.tazkarti.com/assets/images/tazkarti.svg" alt="">
+         </div>
+  <ul>
+      <li routerLink="/home">{{t ('story.f1')}}</li>
+      <li routerLink="/stadium">{{t ('story.f2')}}</li>
+      <li routerLink="/story">{{t ('story.f3')}}</li>
+      <li routerLink="/faq">{{t ('story.f4')}}</li>
+      <li routerLink="/about">{{t ('story.f5')}}</li>
+      <li routerLink="/contact">{{t ('story.f6')}}</li>
+  </ul>
+  </nav>
+  <p>{{t ('story.f7')}}</p>
+</footer>
+</div>
+

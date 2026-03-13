@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 4.5px 90px;
+
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+header .logo .menu svg{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.logo-img{
+    width: 100px;
+    height: 34px;
+}
+.logo-img img{
+    width: 100%;
+    height: 100%;
+}
+.ticket-Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    overflow: hidden;
+    width: 110px;
+    cursor: pointer;
+}
+.ticket-Logo .text{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 17px 2px;
+    color: var(--main-color);
+}
+.ticket-Logo .text::before{
+    position: absolute;
+    content: " ";
+    height: 14px;
+    width: 14px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8.5px;
+}
+.ticket-Logo  .cups-container{
+    position: relative;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 1px;
+}
+.ticket-Logo  .cups-container span{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--main-color);
+}
+.ticket-Logo  .cups-container span.cup1{
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup2{
+    top: 5px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup3{
+    top: 10px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup4{
+    top: 15px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup5{
+    top: 20px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup6{
+    top: 25px;
+    right: 0;
+}
+.ticket-Logo  .cups-container span.cup7{
+    top: 30px;
+    left: 0;
+}
+.ticket-Logo  .cups-container span.cup8{
+    top: 35px;
+    right: 0;
+}
+.ticket-Logo  .part{
+    width: 13px;
+    height: 100%;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+header nav ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--white-color);
+    cursor: pointer;
+    position: relative;
+    padding: 1rem 0;
+}
+header nav ul li svg{
+    font-size: 5px;
+}
+header nav ul li p{
+    font-size: 13px;
+    margin: 0;
+    color: var(--white-color);
+}
+.drop:hover .dropdown{
+    display: block;
+}
+.drop .dropdown:hover{
+    display: block;
+}
+.dropdown {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    display: none;
+    transition: .1s ease;
+}
+.dropdown .lang{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+.dropdown .lang:nth-of-type(1){
+    border-bottom: 1px solid #eee;
+}
+.dropdown .lang img{
+    width: 22px;
+    height: 13px;
+}
+.dropdown .lang .lang-name{
+    font-size: 11px;
+    color: black;
+
+}
+.dropdown .lang .lang-name.ar{
+    font-size: 13px;
+}
+@media (max-width:815px) {
+        header{
+        padding: 0 5%;
+    }
+    .dropdown{
+        bottom: -2.5rem;
+    }
+    header nav ul{
+        gap: .5rem;
+    }
+     header nav ul li{
+        padding-right: .5rem;
+    }
+        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: white;
+    }
+    header nav ul li p{
+        display: none;
+    }
+    header{
+        background-color: #000;
+    }
+    .ticket-Logo{
+        height: 28px;
+        width: 88px;
+    }
+    .ticket-Logo .text::before{
+        background-color: #000;
+        left: -16px;
+    }
+    .ticket-Logo  .cups-container span{
+        background-color: #000;
+    }
+    .ticket-Logo .text{
+        padding: 0 13px 0;
+        font-size: 14px;
+    }
+    .ticket-Logo .part{
+        width: 4px;
+    }
+
+}
+.contact {
+     background-color: rgb(235, 235, 235);
+}
+.contact .contact-content{
+    padding-bottom: 2rem;
+}
+.contact .contact-content h2{
+    font-size: clamp(20px, 4vw, 24px);
+    margin: 2.8rem 0 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.contact .contact-content h3{
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: bold;
+    text-align: center;
+}
+.contact .contact-content .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .8rem;
+}
+.contact .contact-content .phone i{
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 3.2rem);
+    color: var(--main-color);
+}
+.contact .contact-content .phone p{
+    font-weight: bold;
+    font-size: clamp(1.5rem, 2vw, 2.7rem);
+    color: var(--main-color);
+}
+.contact .contact-content form{
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-content form .inputs{
+    width: 40%;
+}
+.contact .contact-content form .inputs p{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: clamp(13px, 2vw, 16px);
+}
+.contact .contact-content form .inputs label{
+    color: #616161;
+    /* font-size: 15px; */
+    font-size: clamp(12px,2vw,6px);
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+.contact .contact-content form .inputs input{
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    padding: .7rem 1rem;
+    width: 100%;
+    background-color: var(--white-color);
+}
+.contact .contact-content form .inputs textarea{
+    height: 7rem;
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+ button{
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: .6rem 2rem .6rem;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-weight: bold;
+}
+@media  (max-width: 576px){
+    .contact .contact-content form .inputs{
+        width: 90%;
+     }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .contact .contact-content form .inputs{
+        width: 70%;
+     }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363636;
+    padding: 30px 90px 22px;
+}
+footer  nav {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+footer  nav ul li{
+    list-style: none;
+    color: var(--white-color);
+    font-size: 12px;
+}
+footer p{
+    color: var(--white-color);
+    font-size: 12px;
+}
+footer  nav .ticket-Logo{
+     background-color: var(--main-color);
+}
+footer  nav .ticket-Logo .text{
+     color: var(--white-color);
+}
+footer  nav .ticket-Logo .text::before{
+     background-color: #363636;
+}
+footer  nav .ticket-Logo .cups-container{
+     background-color: #363636;
+}
+footer  nav .ticket-Logo .cups-container span{
+     background-color: #363636;
+}
+@media  (max-width: 576px){
+    footer{
+        padding: 15px 20px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    footer  nav .footlogo{
+        display: none;
+    }
+        footer  nav ul{
+        flex-wrap: wrap;
+        gap: 0;
+        text-align: center;
+    }
+    footer  nav ul li{
+        width: calc(100% / 3);
+    }
+    footer p{
+        margin-top: .5rem;
+    }
+
+}

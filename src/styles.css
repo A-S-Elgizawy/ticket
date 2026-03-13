@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Encode Sans", sans-serif; */
+     font-family: "Encode Sans Expanded", sans-serif;
+}
+/* body{
+  font-family: "Encode Sans", sans-serif;
+} */
+:root{
+    --main-color:rgb(33, 159, 69);
+    --white-color: white;
+}
+.ant-collapse-content > .ant-collapse-content-box{
+    padding: 0 16px;
+}
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea{
+    display: flex;
+    /* align-items: center; */
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg{
+    font-size: 17px;
+
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
+    position: relative;
+    transform: translateY(33%);
+}
