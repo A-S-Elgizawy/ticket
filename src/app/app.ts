@@ -7,7 +7,7 @@ import { Sidebar } from './service/sidebar';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,RouterLink,CommonModule,TranslocoDirective],
+  imports: [RouterOutlet,RouterLink,CommonModule,TranslocoDirective],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

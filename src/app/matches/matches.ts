@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-matches',
-  imports: [TranslocoDirective,CommonModule,FormsModule, NzSelectModule,TranslocoDirective,RouterLink],
+  imports: [CommonModule,FormsModule, NzSelectModule,RouterLink],
   templateUrl: './matches.html',
   styleUrl: './matches.css',
 })
