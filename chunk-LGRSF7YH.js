@@ -1,0 +1,1 @@
+import{Lb as r,Mb as s,ec as n,qb as i}from"./chunk-6NVZTZ2I.js";var o=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=i({type:t,selectors:[["app-register4"]],decls:2,vars:0,template:function(e,p){e&1&&(r(0,"p"),n(1,"register4 works!"),s())},encapsulation:2})};export{o as Register4};
