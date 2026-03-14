@@ -13,7 +13,7 @@
     position: fixed;
     left: -14rem;
     top: 0;
-    height: 100vh;
+    height: 100dvh;
     z-index: 101;
     transition: .8s ease;
  }
@@ -423,7 +423,8 @@ header nav ul li p{
 }
 .background .heading .text p{
     color: var(--white-color);
-    font-size: clamp(10px,2vw,12px);
+    font-size: clamp(11px,2vw,12px);
+    text-align: center;
 }
 .background .heading .fields{ 
     display: flex;
@@ -492,11 +493,11 @@ header nav ul li p{
 .background .heading .account p{
     color: var(--white-color);
     font-weight: bold;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 .background .heading .account .sign{
     cursor: pointer;
-    font-size: 16px;
+    font-size: clamp(14px,2vw,16px);
 }
 .background .heading .account .register{
     background-color: var(--main-color);
@@ -504,7 +505,9 @@ header nav ul li p{
     padding: .5rem .7rem;
     cursor: pointer;
     transition: .3s ease;
-    font-size: 16px;
+    font-size: clamp(14px,2vw,16px);
+    display: flex;
+    align-items: center;
 }
 .background .heading .account .register:hover{
     background-color: rgb(21, 110, 46);

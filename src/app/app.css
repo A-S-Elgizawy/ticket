@@ -85,7 +85,7 @@
     position: fixed;
     left: -100%;
     top: 0;
-    height: 100vh;
+    height: 100dvh;
     z-index: 101;
     transition: .8s ease;
  }

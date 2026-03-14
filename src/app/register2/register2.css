@@ -230,7 +230,7 @@ header nav ul li p{
     padding-top: 2.5rem;
     font-size: clamp(18px, 4vw, 23px);
 }
-.register  p{
+.register  p{ 
     font-size: clamp(12px, 2vw, 15px);
     color: #616161;
     margin-top: .5rem;
