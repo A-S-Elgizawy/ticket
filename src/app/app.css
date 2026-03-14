@@ -78,7 +78,7 @@
     margin: 0;
     box-sizing: border-box;
 }
- .sidebar{
+ /* .sidebar{
     background-color: #000;
     padding: 1.8rem 1.5rem 2rem;
     width: 18rem;
@@ -88,11 +88,25 @@
     height: 100dvh;
     z-index: 101;
     transition: .8s ease;
- }
-  .sidebar.active{
+ } */
+  .sidebar{
+    background-color: #000;
+    padding: 1.8rem 1.5rem 2rem;
+    width: 18rem;
+    position: fixed;
+    inset-inline-start: -100%;
+    /* left: 0; */
+    top: 0;
+    height: 100dvh;
+    z-index: 101;
+    transition: .8s ease;
+}
+  /* .sidebar.active{
     left: 0;
-  }
-
+  } */
+.sidebar.active{
+    inset-inline-start: 0;
+}
   .sidebar .content{
     display: flex;
     flex-direction: column;
@@ -105,17 +119,55 @@
     align-items: end;
     color: var(--white-color); 
     cursor: pointer;
- 
 }
-.sidebar .content .icon-con.x span{
+.sidebar .content .icon-con.x span{ 
     width: 18px;
     height: 2px;
     background-color: white;
     display: block;
     margin-bottom: 5px;
     transition: .5s ease;
-    
 }
+
+/* .sidebar .content .icon-con.x span.one{
+    right: 0;
+    top: 0;
+}
+.sidebar .content .icon-con.x span.two{
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sidebar .content .icon-con.x span.three{
+    right: 0;
+    bottom: 0;
+} */
+/* ====== */
+/* .sidebar.active .content .icon-con.x span.one{
+    transform: rotate(45deg) translate(4px,4px);
+    transition-delay: .4s;
+}
+.sidebar.active .content .icon-con.x span.three{
+    transform: rotate(-45deg) translate(5px,-4px);
+     transition-delay: .4s;
+}
+.sidebar.active .content .icon-con.x span.two{
+    left: -10rem;
+    transition-delay: .1s;
+} */
+/* ====== */
+/* .sidebar.removeActive .content .icon-con.x span.one{
+    transform: rotate(0deg) translate(0px,0px);
+}
+.sidebar.removeActive .content .icon-con.x span.three{
+    transform: rotate(0deg) translate(0px,0px);
+}
+.sidebar.removeActive .content .icon-con.x span.two{
+    right: 0;
+    transition-delay: .2s;
+} */
+
+/* ========= */
 .sidebar.active .content .icon-con.x span.one{
     transform: rotate(46deg) translateY(10px);
     transition-delay: .4s;
@@ -125,11 +177,19 @@
      transition-delay: .4s;
 }
 .sidebar.active .content .icon-con.x span.two{
-    transform: translateX(-30rem);
+    /* transform: translateX(-20rem); */
     transition-delay: .5s;
 }
+html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(-30rem);
+}
 
+/* RTL */
+html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(30rem);
+}
 
+/* ========= */
 .sidebar.removeActive .content .icon-con.x span.one{
     transform: rotate(0deg) translateY(0px);
 }
@@ -140,6 +200,16 @@
     transform: translateX(0rem);
     transition-delay: .2s;
 }
+
+/* عندما يكون الموقع LTR */
+/* :host-context([dir="ltr"]) .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(-30rem);
+} */
+
+/* عندما يكون الموقع RTL */
+/* :host-context([dir="rtl"]) .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(30rem);
+} */
 
 .sidebar .content  nav ul li{
     list-style: none;

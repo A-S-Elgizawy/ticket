@@ -139,6 +139,7 @@ header nav ul li p{
     bottom: -3.5rem;
     left: 0;
     display: none;
+    overflow: hidden;
 }
 .dropdown .lang{
     display: flex;
@@ -161,6 +162,14 @@ header nav ul li p{
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
 }
+.dropdown .lang:hover{
+    background-color: var(--main-color);  
+}
+.dropdown .lang:hover .lang-name{
+    color: var(--white-color);
+}
+
+
 
 @media (max-width:815px) {
     header nav ul li p{

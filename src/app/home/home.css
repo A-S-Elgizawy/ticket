@@ -36,7 +36,6 @@
     align-items: end;
     color: var(--white-color); 
     cursor: pointer;
- 
 }
 .sidebar .content .icon-con.x span{
     width: 18px;
@@ -59,6 +58,7 @@
     transform: translateX(-20rem);
     transition-delay: .5s;
 }
+
 
 
 .sidebar.removeActive .content .icon-con.x span.one{
@@ -316,7 +316,7 @@ header nav ul li p{
     bottom: -3.5rem;
     left: 0;
     display: none;
-    /* z-index: 150; */
+    overflow: hidden;
 }
 
 .dropdown .lang{
@@ -340,6 +340,14 @@ header nav ul li p{
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
 }
+.dropdown .lang:hover{
+    background-color: var(--main-color);  
+}
+.dropdown .lang:hover .lang-name{
+    color: var(--white-color);
+}
+
+
 
 @media (max-width:775px) {
     .dropdown{

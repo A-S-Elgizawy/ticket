@@ -141,6 +141,7 @@ header nav ul li p{
     left: 0;
     display: none;
     transition: .1s ease;
+    overflow: hidden;
 }
 .dropdown .lang{
     display: flex;
@@ -148,6 +149,7 @@ header nav ul li p{
     gap: 5px;
     padding: 5px;
 }
+
 .dropdown .lang:nth-of-type(1){
     border-bottom: 1px solid #eee;
 }
@@ -158,11 +160,18 @@ header nav ul li p{
 .dropdown .lang .lang-name{
     font-size: 11px;
     color: black;
-
 }
+
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
 }
+.dropdown .lang:hover{
+    background-color: var(--main-color);  
+}
+.dropdown .lang:hover .lang-name{
+    color: var(--white-color);
+}
+
 @media (max-width:815px) {
     header{
         padding: 0 5%;

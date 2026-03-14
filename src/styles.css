@@ -28,3 +28,15 @@
     position: relative;
     transform: translateY(33%);
 }
+
+
+/* ===== */
+/* LTR */
+html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(-30rem);
+}
+
+/* RTL */
+html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(30rem);
+}
