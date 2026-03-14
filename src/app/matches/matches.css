@@ -707,11 +707,13 @@ footer  nav .ticket-Logo .cups-container span{
     }
         footer  nav ul{
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;
@@ -728,11 +730,13 @@ footer  nav .ticket-Logo .cups-container span{
     }
         footer  nav ul{
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;

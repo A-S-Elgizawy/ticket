@@ -207,24 +207,21 @@ header nav ul li p{
     .ticket-Logo .part{
         width: 4px;
     }
-    header nav ul li:not(header nav ul li:nth-last-child(1)) {
-        padding-right: 15px;
-        border-right: 1px solid white;
-    }
+
 }
 .story{
     background-color: rgb(235, 235, 235);
     min-height: calc(100vh - 86px);
 }
 .story .story-content{
-    padding: 2rem 5%;
+    padding: 1.5rem 5% 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 .story .story-content h2{
     font-size: clamp(20px, 4vw, 28px);
-    margin: .5rem 0 1.2rem;
+    margin: .5rem 0 1.5rem;
     font-weight: bold;
     text-align: center;
 }
@@ -253,7 +250,7 @@ header nav ul li p{
 .story .story-content nz-collapse-panel .details .item p{
     width: calc(50% / 4);
     text-align: center;
-    font-size: clamp(13px,2vw,15px);
+    font-size: clamp(12px,2vw,15px);
     font-weight: 400;
 }
 
@@ -261,7 +258,7 @@ header nav ul li p{
     font-weight: 600;
 }
 .story .story-content nz-collapse-panel .details .head p{
-    font-size: clamp(13px,2vw,15px);
+    font-size: clamp(12px,2vw,15px);
     font-weight: 600;
 }
 .story .story-content nz-collapse-panel .details .item p.adress{
@@ -269,6 +266,9 @@ header nav ul li p{
 }
 
 @media  (max-width: 576px){
+    .story .story-content nz-collapse-panel .details .item{
+        padding: 1rem 0rem;
+    }
 .story .story-content nz-collapse-panel .details .item p:nth-of-type(4){
     display: none;
 }
@@ -342,11 +342,13 @@ footer  nav .ticket-Logo .cups-container span{
     }
         footer  nav ul{
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;
@@ -363,11 +365,13 @@ footer  nav .ticket-Logo .cups-container span{
     }
         footer  nav ul{
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;

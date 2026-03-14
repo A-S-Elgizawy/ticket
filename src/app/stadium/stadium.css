@@ -211,7 +211,7 @@ header nav ul li p{
 .stadium {
     background-color: rgb(235, 235, 235);
     height: 100vh;
-}
+} 
 .stadium .stadium-content{
     padding: 2rem 0;
     display: flex;
@@ -237,7 +237,7 @@ header nav ul li p{
     transition: .3s ease;
 }
 .stadium .stadium-content .satds p{
-    font-size: clamp(13px,2rem,15px);
+    font-size: clamp(12px,2vw,15px);
 }
 .stadium .stadium-content .satds .head p{
     font-weight: 600;
@@ -340,9 +340,7 @@ footer  nav .ticket-Logo .cups-container span{
         padding: 15px 20px 15px;
         flex-direction: column;
         align-items: center;
-        /* justify-content: space-between; */
         align-content: space-between;
-        /* gap: 1rem; */
     }
     footer  nav .footlogo{
         display: none;
@@ -351,9 +349,11 @@ footer  nav .ticket-Logo .cups-container span{
         flex-wrap: wrap;
         gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;
@@ -370,11 +370,13 @@ footer  nav .ticket-Logo .cups-container span{
     }
         footer  nav ul{
         flex-wrap: wrap;
-        gap: 0;
+        gap: 0rem;
         text-align: center;
+        justify-content: space-between;
     }
     footer  nav ul li{
-        width: calc(100% / 3);
+        width: calc((100% - 3rem) / 3);
+        white-space: nowrap;
     }
     footer p{
         margin-top: .5rem;
