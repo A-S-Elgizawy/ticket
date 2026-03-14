@@ -11,6 +11,7 @@ export const routes: Routes = [
     {
         path:'home',
         loadComponent: ()=> import("./home/home").then((m)=> m.Home),
+        providers: [provideTranslocoScope('home')]
     },
     {
         path:'match',
