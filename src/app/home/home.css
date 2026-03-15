@@ -11,14 +11,15 @@
     padding: 1.8rem 1.5rem 2rem;
     width: 18rem;
     position: fixed;
-    left: -14rem;
+    inset-inline-start: -14rem;
     top: 0;
     height: 100dvh;
     z-index: 101;
     transition: .8s ease;
+    overflow:hidden;
  }
   .sidebar.active{
-    left: 0;
+    inset-inline-start: 0;
   }
   .background .menu{
     display: none;
@@ -55,11 +56,18 @@
      transition-delay: .4s;
 }
 .sidebar.active .content .icon-con.x span.two{
-    transform: translateX(-20rem);
+    /* transform: translateX(-20rem); */
     transition-delay: .5s;
 }
 
+html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(-30rem);
+}
 
+/* RTL */
+html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(30rem);
+}
 
 .sidebar.removeActive .content .icon-con.x span.one{
     transform: rotate(0deg) translateY(0px);
@@ -71,6 +79,9 @@
     transform: translateX(0rem);
     transition-delay: .2s;
 }
+
+
+
 .sidebar .content  nav ul{
     padding-top: 5rem;
 }
@@ -117,16 +128,25 @@
     transition: .6s ease;
     transition-delay: calc((0.3s / 3) * var(--z));   
 }
-.sidebar.active .content .social .icon-con:nth-of-type(1){
-    transform: translate(-100px, 75px);
-}
-.sidebar.active .content .social .icon-con:nth-of-type(2){
-    transform: translate(-50px, 39px);
-}
 .sidebar.active .content .social .icon-con:nth-of-type(3){
     transform: translateY(0px);
 }
 
+:host-context([dir="ltr"]) .sidebar.active .content .social .icon-con:nth-of-type(1){
+    transform: translate(-100px, 75px);
+}
+
+:host-context([dir="ltr"]) .sidebar.active .content .social .icon-con:nth-of-type(2){
+    transform: translate(-50px, 39px);
+}
+
+:host-context([dir="rtl"]) .sidebar.active .content .social .icon-con:nth-of-type(1){
+    transform: translate(100px, 75px);
+}
+
+:host-context([dir="rtl"]) .sidebar.active .content .social .icon-con:nth-of-type(2){
+    transform: translate(50px, 39px);
+}
 .sidebar.active .content .social .icon-con{
     flex-direction: row;
     justify-content: start;
@@ -157,7 +177,7 @@
 @media  (max-width: 576px){
     .sidebar{
         width: 20rem;
-        left: -20rem;
+        inset-inline-start: -20rem;
      }
     .background .menu{
     display: block;
@@ -165,7 +185,7 @@
 }
 @media (min-width: 577px) and (max-width: 992px) {
     .sidebar{
-        left: -18rem;
+        inset-inline-start: -18rem;
     }
     .background .menu{
     display: block;
@@ -516,6 +536,9 @@ header nav ul li p{
     font-size: clamp(14px,2vw,16px);
     display: flex;
     align-items: center;
+}
+.background .heading .account .register span{
+    padding: 0 5px;
 }
 .background .heading .account .register:hover{
     background-color: rgb(21, 110, 46);

@@ -3,12 +3,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* font-family: "Encode Sans", sans-serif; */
-     font-family: "Encode Sans Expanded", sans-serif;
+    /* font-family: "Encode Sans Expanded", sans-serif; */
+    /* font-family: "Cairo", sans-serif; */
 }
-/* body{
-  font-family: "Encode Sans", sans-serif;
-} */
+html[dir="ltr"] body{
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+html[dir="rtl"] body{
+  font-family: "Cairo", sans-serif;
+}
 :root{
     --main-color:rgb(33, 159, 69);
     --white-color: white;
@@ -39,4 +43,20 @@ html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
 /* RTL */
 html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
     transform: translateX(30rem);
+}
+
+/* ======= */
+html[dir="ltr"] .sidebar.active .content .social-home .icon-con.f{
+    transform: translate(-100px, 75px);
+}
+html[dir="ltr"] .sidebar.active .content .social-home .icon-con.t{
+    transform: translate(-50px, 39px);
+}
+
+html[dir="rtl"] .sidebar.active .content .social-home .icon-con.f{
+    transform: translate(100px, 75px);
+}
+
+html[dir="rtl"] .sidebar.active .content .social-home .icon-con.t{
+    transform: translate(50px, 39px);
 }

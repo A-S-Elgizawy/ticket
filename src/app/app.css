@@ -95,11 +95,11 @@
     width: 18rem;
     position: fixed;
     inset-inline-start: -100%;
-    /* left: 0; */
     top: 0;
     height: 100dvh;
     z-index: 101;
     transition: .8s ease;
+    overflow:hidden;
 }
   /* .sidebar.active{
     left: 0;
@@ -129,43 +129,6 @@
     transition: .5s ease;
 }
 
-/* .sidebar .content .icon-con.x span.one{
-    right: 0;
-    top: 0;
-}
-.sidebar .content .icon-con.x span.two{
-    right: 0rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.sidebar .content .icon-con.x span.three{
-    right: 0;
-    bottom: 0;
-} */
-/* ====== */
-/* .sidebar.active .content .icon-con.x span.one{
-    transform: rotate(45deg) translate(4px,4px);
-    transition-delay: .4s;
-}
-.sidebar.active .content .icon-con.x span.three{
-    transform: rotate(-45deg) translate(5px,-4px);
-     transition-delay: .4s;
-}
-.sidebar.active .content .icon-con.x span.two{
-    left: -10rem;
-    transition-delay: .1s;
-} */
-/* ====== */
-/* .sidebar.removeActive .content .icon-con.x span.one{
-    transform: rotate(0deg) translate(0px,0px);
-}
-.sidebar.removeActive .content .icon-con.x span.three{
-    transform: rotate(0deg) translate(0px,0px);
-}
-.sidebar.removeActive .content .icon-con.x span.two{
-    right: 0;
-    transition-delay: .2s;
-} */
 
 /* ========= */
 .sidebar.active .content .icon-con.x span.one{
