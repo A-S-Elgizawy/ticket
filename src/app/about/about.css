@@ -160,6 +160,7 @@ header nav ul li p{
 .dropdown .lang .lang-name{
     font-size: 11px;
     color: black;
+    font-family: "Cairo", sans-serif;
 }
 
 .dropdown .lang .lang-name.ar{
@@ -182,19 +183,7 @@ header nav ul li p{
     header nav ul{
         gap: .5rem;
     }
-     header nav ul li{
-        padding-right: .5rem;
-    }
-        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
-        position: absolute;
-        content: " ";
-        height: 30px;
-        width: 1px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        background-color: white;
-    }
+
     header nav ul li p{
         display: none;
     }
@@ -219,7 +208,32 @@ header nav ul li p{
     .ticket-Logo .part{
         width: 4px;
     }
-
+    :host-context([dir="ltr"]) header nav ul li{
+        padding-right: .5rem;
+    }
+    :host-context([dir="rtl"]) header nav ul li{
+        padding-left: .5rem;
+    }
+:host-context([dir="rtl"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0; 
+        background-color: white;
+}
+:host-context([dir="ltr"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0; 
+        background-color: white;
+}
 }
 .about {
     background-color: rgb(235, 235, 235);

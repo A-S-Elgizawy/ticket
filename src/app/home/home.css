@@ -193,16 +193,10 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 }
 /* ========= */
 header{
-    /* padding: 22px 90px 15px 140px; */
     padding: 11px 78px 0px 118px;
-    /* width: 100vw; */
-    /* background-color: var(--main-color); */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     z-index: 100;
     position: relative;
 }
@@ -327,7 +321,6 @@ header nav ul li p{
 }
 .drop .dropdown:hover{
     display: block;
-    /* background-color: green; */
 }
 .dropdown {
     background-color: white;
@@ -355,7 +348,7 @@ header nav ul li p{
 .dropdown .lang .lang-name{
     font-size: 11px;
     color: black;
-
+    font-family: "Cairo", sans-serif;
 }
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
@@ -376,9 +369,7 @@ header nav ul li p{
     header nav ul{
         gap: .5rem;
     }
-    header nav ul li{
-        padding-right: .5rem;
-    }
+
     header nav ul li p{
         display: none;
     }
@@ -399,17 +390,32 @@ header nav ul li p{
     .ticket-Logo .part{
         width: 4px;
     }
-    header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+    :host-context([dir="ltr"]) header nav ul li{
+        padding-right: .5rem;
+    }
+    :host-context([dir="rtl"]) header nav ul li{
+        padding-left: .5rem;
+    }
+:host-context([dir="rtl"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
         position: absolute;
         content: " ";
         height: 30px;
         width: 1px;
         top: 50%;
         transform: translateY(-50%);
-        right: 0;
+        left: 0; 
         background-color: white;
-    }
-
+}
+:host-context([dir="ltr"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0; 
+        background-color: white;
+}
 
 }
 @media (min-width: 776px) and (max-width: 992px) {

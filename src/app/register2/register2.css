@@ -157,7 +157,7 @@ header nav ul li p{
 .dropdown .lang .lang-name{
     font-size: 11px;
     color: black;
-
+    font-family: "Cairo", sans-serif;
 }
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
@@ -184,19 +184,32 @@ header nav ul li p{
     header nav ul{
         gap: .5rem;
     }
-     header nav ul li{
+    :host-context([dir="ltr"]) header nav ul li{
         padding-right: .5rem;
     }
-        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+    :host-context([dir="rtl"]) header nav ul li{
+        padding-left: .5rem;
+    }
+:host-context([dir="rtl"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
         position: absolute;
         content: " ";
         height: 30px;
         width: 1px;
         top: 50%;
         transform: translateY(-50%);
-        right: 0;
+        left: 0; 
         background-color: white;
-    }
+}
+:host-context([dir="ltr"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0; 
+        background-color: white;
+}
     .ticket-Logo{
         height: 28px;
         width: 88px;

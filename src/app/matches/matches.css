@@ -157,10 +157,11 @@ header nav ul li p{
 .dropdown .lang .lang-name{
     font-size: 11px;
     color: black;
-
+    font-family: "Cairo", sans-serif;
 }
 .dropdown .lang .lang-name.ar{
     font-size: 13px;
+    font-family: "Cairo", sans-serif !important;
 }
 .dropdown .lang:hover{
     background-color: var(--main-color);  
@@ -184,19 +185,32 @@ header nav ul li p{
     header nav ul{
         gap: .5rem;
     }
-     header nav ul li{
+    :host-context([dir="ltr"]) header nav ul li{
         padding-right: .5rem;
     }
-        header nav ul li:not(header nav ul li:nth-last-child(1))::after {
+    :host-context([dir="rtl"]) header nav ul li{
+        padding-left: .5rem;
+    }
+:host-context([dir="rtl"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
         position: absolute;
         content: " ";
         height: 30px;
         width: 1px;
         top: 50%;
         transform: translateY(-50%);
-        right: 0;
+        left: 0; 
         background-color: white;
-    }
+}
+:host-context([dir="ltr"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
+        position: absolute;
+        content: " ";
+        height: 30px;
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0; 
+        background-color: white;
+}
     .ticket-Logo{
         height: 28px;
         width: 88px;
@@ -375,7 +389,7 @@ nz-select {
     height: 50px;
 }
 .match .content .cups .cupItem p{
-    font-size: 16px;
+    font-size: clamp(13px,2vw,16px);
     font-weight: 600;
     transition: .2s ease;
 }
@@ -409,13 +423,21 @@ nz-select {
     background-color: white;
 
 }
-/* .match .content .tickets .items .item{
-    width: calc((100% - 8rem) / 4);
-} */
+.contain{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contain .item {
+   width: calc((100% - 1rem) / 3);
+}
+
 .match .content .tickets .items .teams{
     display: flex;
     align-items: center;
     gap: .5rem;
+    width: 38%;
 }
 .match .content .tickets .items .teams .logos{
     position: relative;
@@ -438,7 +460,7 @@ nz-select {
 }
 .match .content .tickets .items .teams p{
     font-weight: bold;
-    font-size: clamp(11px , 2vw, 15px);
+    font-size: clamp(11px , 2vw, 14px);
 }
 .match .content .tickets .items .teams p span{
     font-weight: 600;
@@ -451,20 +473,20 @@ nz-select {
     gap: .5rem;
 }
 .match .content .tickets .items .stadium .img-con{
-    width: 37px;
-    height: 37px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .match .content .tickets .items .stadium .img-con img{
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
 }
 .match .content .tickets .items .stadium p{
     font-weight: 600;
-    font-size: clamp(10px,2vw,13px);
+    font-size: clamp(11px,2vw,12px);
 }
 .match .content .tickets .items .stadium p span{
     font-size: 11px;
@@ -476,19 +498,19 @@ nz-select {
     gap: .5rem;
 }
 .match .content .tickets .items .date .img-con{
-    width: 38px;
-    height: 40px;
+    width: 30px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .match .content .tickets .items .date .img-con img{
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 32px;
     object-fit: cover;
 }
 .match .content .tickets .items .date .month{
-    font-size: clamp(10px,2vw,13px);
+    font-size: clamp(11px,2vw,12px);
     font-weight: 600;
 }
 .match .content .tickets .items .date .time{
@@ -497,29 +519,33 @@ nz-select {
     font-weight: 600;
 }
 .match .content .tickets .items button{
-    padding: .5rem 3rem;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
     background-color: var(--main-color);
     color: white;
     font-weight: bold;
     border: none;
-    font-size: 17px;
+    font-size: 15px;
 }
-.match .content .tickets .items2{
+.match .content .tickets .foo{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .5rem .8rem;
     background-color: #f7f7f7;
 }
-.match .content .tickets .items2 p{
+.match .content .tickets .foo p{
     color: #424242;
+    font-size: 12px;
 }
-.match .content .tickets .items2 span , 
-.match .content .tickets .items2 .state{
+.match .content .tickets .foo span , 
+.match .content .tickets .foo .state{
      color: black;
      position: relative;
+     font-size: 12px;
 }
-.match .content .tickets .items2 .state::before{
+.match .content .tickets .foo .state::before{
      position: absolute;
      content: " ";
      width: 10px;
@@ -528,7 +554,7 @@ nz-select {
      background-color: var(--main-color);
      top: 50%;
      transform: translateY(-50%);
-     left: -20px;
+     left: -15px;
 }
 .match .content .tickets .btn-sm-up{
     width: 100%;
@@ -557,7 +583,9 @@ nz-select {
     .match .content{
     padding: 2.5rem 20px;
 }
-
+.match .content .tickets .foo{
+    width: 100%;
+}
 }
 @media  (max-width: 915px){
     .match .content{
@@ -582,11 +610,11 @@ nz-select {
 .match .content .tickets .items .teams2 .squad{
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .3rem;
 }
 .match .content .tickets .items .teams2 .squad .img-con{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -598,7 +626,7 @@ nz-select {
 }
 .match .content .tickets .items .teams2 .squad p{
     font-weight: bold;
-    font-size: 17px;
+    font-size: 14px;
 }
 .match .content .tickets .items .stadium , 
 .match .content .tickets .items .date{
@@ -609,37 +637,43 @@ nz-select {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
     
+}
+.match .content .tickets .items .stad-date .item{
+    width: calc((100% - .5rem) / 2);
 }
 .match .content .tickets .items .stad-date .stadium{
     display: flex;
 }
 .match .content .tickets .items .stad-date .date{
     display: flex;
+    justify-content: end;
 }
-.match .content .tickets .items .stad-date .img-con{
+/* .match .content .tickets .items .stad-date .img-con{
     width: 35px;
     height: 35px;
-}
-.match .content .tickets .items .stad-date .img-con.calender{
+} */
+/* .match .content .tickets .items .stad-date .img-con.calender{
     height: 35.5px;
     width: 35px;
-}
+} */
 .match .content .tickets .items2{
     display: none;
 }
+
 .match .content .tickets .items2_2{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding:1rem ;
+    padding:.5rem ;
     background-color: #f7f7f7;
 }
 .match .content .tickets .items2_2 .co{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .match .content .tickets .items2_2 p{
     color: #424242;
@@ -647,15 +681,36 @@ nz-select {
 .match .content .tickets .items2_2 span{
     color: black;
 }
-      .match .content .tickets .btn-lg{
+      .match .content .tickets .contain .btn-lg{
         display: none;
       }
       .match .content .tickets .btn-sm-up{
         display: block;
       }
+
+.match .content .tickets .items .date .img-con img{
+    width: 34px;
+    height: 32px;
+    object-fit: cover;
+}
+.match .content .tickets .items .date .img-con{
+    width: 28px;
+    height: 39px;
+}
+.match .content .tickets .items .date .img-con img{
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+}
 }
 @media (min-width: 577px) and (max-width: 992px) {
-      .match .content .tickets .btn-lg{
+    .match .content .tickets .items .teams{
+        width: 48%;
+    }
+    .contain .item{
+        width: calc((100% - 1rem) / 2);
+    }
+      .match .content .tickets .contain .btn-lg{
         display: none;
       }
       .match .content .tickets .btn-sm-up{

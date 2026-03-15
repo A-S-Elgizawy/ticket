@@ -78,17 +78,7 @@
     margin: 0;
     box-sizing: border-box;
 }
- /* .sidebar{
-    background-color: #000;
-    padding: 1.8rem 1.5rem 2rem;
-    width: 18rem;
-    position: fixed;
-    left: -100%;
-    top: 0;
-    height: 100dvh;
-    z-index: 101;
-    transition: .8s ease;
- } */
+
   .sidebar{
     background-color: #000;
     padding: 1.8rem 1.5rem 2rem;
@@ -101,9 +91,7 @@
     transition: .8s ease;
     overflow:hidden;
 }
-  /* .sidebar.active{
-    left: 0;
-  } */
+
 .sidebar.active{
     inset-inline-start: 0;
 }
