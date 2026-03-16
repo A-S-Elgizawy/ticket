@@ -586,6 +586,13 @@ nz-select {
 .match .content .tickets .foo{
     width: 100%;
 }
+
+.match .content .tickets .items2_2 p{
+     font-size: 10px;
+}
+.match .content .tickets .items2_2 span{
+     font-size: 10px;
+}
 }
 @media  (max-width: 915px){
     .match .content{
@@ -626,7 +633,7 @@ nz-select {
 }
 .match .content .tickets .items .teams2 .squad p{
     font-weight: bold;
-    font-size: 14px;
+    font-size: clamp(12px,2vw,15px);
 }
 .match .content .tickets .items .stadium , 
 .match .content .tickets .items .date{
