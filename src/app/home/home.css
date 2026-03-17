@@ -193,7 +193,7 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 }
 /* ========= */
 header{
-    padding: 11px 78px 0px 118px;
+    padding: 11px 78px 0px 135px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -210,8 +210,8 @@ header .logo .menu svg{
     cursor: pointer;
 }
 .logo-img{
-    width: 100px;
-    height: 34px;
+    width: 115px;
+    height: 36px;
 }
 .logo-img img{
     width: 100%;

@@ -336,9 +336,9 @@ nz-select {
 }
 .match .content .cups{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    gap: 2rem;
+    /* gap: 2rem; */
     padding-bottom: 2.5rem;
     
 }
@@ -346,6 +346,7 @@ nz-select {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 .match .content .cups .cupItem .img-con{
    width: 100px;
@@ -554,7 +555,7 @@ nz-select {
      background-color: var(--main-color);
      top: 50%;
      transform: translateY(-50%);
-     left: -15px;
+     inset-inline-start: -15px; 
 }
 .match .content .tickets .btn-sm-up{
     width: 100%;
@@ -674,7 +675,7 @@ nz-select {
     display: flex;
     flex-direction: column;
     gap: .7rem;
-    padding:.5rem ;
+    padding:.5rem 1rem ;
     background-color: #f7f7f7;
 }
 .match .content .tickets .items2_2 .co{

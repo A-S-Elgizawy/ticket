@@ -56,7 +56,7 @@ export class Faq {
     },
     {
       active: false,
-      disabled: true,
+      disabled: true, 
       name: 'faq.h_5',
         childPannel: [
         {
