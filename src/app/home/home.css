@@ -217,7 +217,7 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
   /* font-family: cursive; */
   /* font-family: 'Dancing Script', cursive; */
   /* font-family: 'Caveat', cursive; */
-  font-family: "Encode Sans Expanded", sans-serif;
+  /* font-family: "Encode Sans Expanded", sans-serif; */
   font-size: 20px;
   border-radius: 10px;
   background: #fff;
@@ -228,9 +228,9 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
   display: flex;
   align-items: center;
 }
-:host-context([dir="rtl"]) .page {
+/* :host-context([dir="rtl"]) .page {
     font-family: "Cairo", sans-serif;
-}
+} */
 @media  (max-width: 576px){
     .page{
         width: 450px;
@@ -479,16 +479,22 @@ header nav ul li p{
     }
     .logo-img{
         height: 30px;
-        width: 115px;
+        width: 100px;
     }
     header .logo{
         gap: 1rem;
     }
 }
 @media  (max-width: 576px){
-       header {
-        padding: 0 3%;
-       }
+    header {
+    
+    :host-context([dir="ltr"]) header{
+    padding: 0 3%; 
+    }
+    :host-context([dir="rtl"]) header{
+    padding: 0 3%;
+    }
+    }
 }
 /* @media (min-width: 776px) and (max-width: 992px) {
     header{
