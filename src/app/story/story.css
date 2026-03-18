@@ -22,6 +22,7 @@ header .logo .menu svg{
 .logo-img{
     width: 100px;
     height: 34px;
+    cursor: pointer;
 }
 .logo-img img{
     width: 100%;

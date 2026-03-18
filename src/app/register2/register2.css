@@ -23,6 +23,7 @@ header .logo .menu svg{
 .logo-img{
     width: 100px;
     height: 34px;
+    cursor: pointer;
 }
 .logo-img img{
     width: 100%;
@@ -430,14 +431,13 @@ header nav ul li p{
 
 
 
-
+ 
 @media  (max-width: 576px){
      .register .content .info .progress{
         gap: 2.6rem;
      }
      .register .content .info .progress .item .number{
         font-size: 14px;
-        
      }
      .register .content .info .progress .item .number .complete i{
         font-size: 16px;

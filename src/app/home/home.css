@@ -213,6 +213,7 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
   position: relative;
   box-sizing: border-box;
   max-width: 450px;
+  height: 70%;
   font-family: cursive;
   font-size: 20px;
   border-radius: 10px;
@@ -220,20 +221,30 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
   background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
   background-size: 100% 1.2rem;
   line-height: 1.2rem;
-  padding: 1.4rem 0.5rem 4rem 4.5rem;
+  padding: 1.4rem 1rem 4rem 4rem;
+  display: flex;
+  align-items: center;
 }
 @media  (max-width: 576px){
     .page{
         width: 450px;
     }
 }
-.page p span{
+.page p .rega{
     position: absolute;
-    bottom: 10px;
-    /* inset-inline-start:10px; */
-    right: 5px;
-    
+    bottom: 2.2rem;
+    right: 1rem;  
 }
+.page p .back{
+    position: absolute;
+    top: 20px;
+    left: -9px;  
+    font-size: 17px;
+    color: #c10303;
+    cursor: pointer;
+}
+
+
 .page::before,
 .page::after {
   position: absolute;
@@ -272,7 +283,7 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 .page p {
   margin: 0;
   text-indent: 1rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 2.2rem;
   color: black;
   color: #0000FF;
   color: #1E3A8A;
@@ -280,7 +291,6 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 }
 /* ========= */
 header{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -305,6 +315,7 @@ header .logo .menu svg{
 .logo-img{
     width: 115px;
     height: 36px;
+    cursor: pointer;
 }
 .logo-img img{
     width: 100%;
@@ -512,14 +523,20 @@ header nav ul li p{
 }
 
 }
-@media  (max-width: 576px){
-    header{
+@media  (max-width: 768px){
+
     :host-context([dir="ltr"]) header{
-    padding: 10px 5%; 
+    padding: 0 5%; 
     }
     :host-context([dir="rtl"]) header{
-    padding: 10px 5%;
+    padding: 0 5%;
     }
+    .logo-img{
+        height: 32px;
+        width: 115px;
+    }
+    header .logo{
+        gap: 1rem;
     }
 }
 /* @media (min-width: 776px) and (max-width: 992px) {
@@ -530,7 +547,7 @@ header nav ul li p{
 .background {
     background-image: url("https://www.tazkarti.com/home-bg.70bc157e537190448e7c.jpg");
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
     position: relative;
     background-size: cover;
     background-position: center center;

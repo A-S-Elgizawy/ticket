@@ -23,6 +23,7 @@ header .logo .menu svg{
 .logo-img{
     width: 100px;
     height: 34px;
+    cursor: pointer;
 }
 .logo-img img{
     width: 100%;
@@ -370,7 +371,10 @@ header nav ul li p{
         padding: 0 2rem 8rem;
      }
      .register .content .info .progress{
-        gap: 2.8rem;
+        gap: 2.6rem;
+     }
+    .register .content .info .progress .item .number{
+        font-size: 14px;
      }
 }
 
