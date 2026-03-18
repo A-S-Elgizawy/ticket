@@ -26,7 +26,10 @@
     "tour2":"tournament",
     "matchNo":"Match No.",
     "book":"Book Ticket",
-
+    "stadium1":"Suez Stadium",
+    "stadium2":"Cairo Int. Stadium",
+    "message":"Not completed yet.",
+    
     "match1_name1":"El Gouna FC",
     "match1_img1":"https://www.tazkarti.com/assets/images/imagesref/77379950-aa8c-466a-8ef5-1c36fc1bc777.png",
     "match1_name2":"Al-Masry SC",
@@ -69,7 +72,7 @@
     "match3_stage":"First Stage",
     "match3_state":"Available",
 
-    "match4_name1":"Al Ahly Sc",
+    "match4_name1":"Al Ahly SC",
     "match4_img1":"https://upload.wikimedia.org/wikipedia/ar/thumb/2/21/Al_Ahly_SC_logo_23.svg/1280px-Al_Ahly_SC_logo_23.svg.png",
     "match4_name2":"Espérance Sportive",
     "match4_img2":"https://upload.wikimedia.org/wikipedia/ar/thumb/3/36/%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A_%D8%A7%D9%84%D8%AA%D9%88%D9%86%D8%B3%D9%8A.svg/3840px-%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A_%D8%A7%D9%84%D8%AA%D9%88%D9%86%D8%B3%D9%8A.svg.png",
