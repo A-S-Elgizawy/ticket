@@ -9,7 +9,7 @@
         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
         <path d="M3 5h18v2H3zm0 6h13v2H3zm0 6h8v2H3z"></path>
         </svg>
-      </div>
+      </div> 
       <div class="logo-img" routerLink="/home">
     <img src="https://www.tazkarti.com/assets/images/logo1.svg" alt="">
   </div>
@@ -83,9 +83,11 @@
         nzPlaceHolder="All"
         [(ngModel)]="teamFilter">
 <!-- (ngModelChange)="filterMatches()" اذا كنت تريد ان يحدث البحث بمجرد الإختيار ضع هذه فوق وفى كل الحقول -->
-          <nz-option nzLabel="El Gouna FC" nzValue="El Gouna FC"></nz-option>
-          <nz-option nzLabel="Zamalek SC" nzValue="Zamalek SC"></nz-option>
-          <nz-option nzLabel="Modern Sport Club" nzValue="Modern Sport Club"></nz-option>
+          <nz-option [nzLabel]="t('match.match4_name1')" nzValue="Al Ahly SC"></nz-option>
+          <nz-option [nzLabel]="t('match.match5_name1')" nzValue="Zamalek SC"></nz-option>
+          <nz-option [nzLabel]="t('match.match1_name2')" nzValue="Al-Masry SC"></nz-option>
+          <nz-option [nzLabel]="t('match.match3_name1')" nzValue="ZED FC"></nz-option>
+          <nz-option [nzLabel]="t('match.match2_name1')" nzValue="Enppi SC"></nz-option>
 
         </nz-select>
       </div>
@@ -98,8 +100,8 @@
         [(ngModel)]="stadiumFilter"
         >
 
-          <nz-option nzLabel="Suez" nzValue="Suez"></nz-option>
-          <nz-option nzLabel="Cairo" nzValue="Cairo"></nz-option>
+          <nz-option [nzLabel]="t('match.stadium1')" nzValue="Suez"></nz-option>
+          <nz-option [nzLabel]="t('match.stadium2')" nzValue="Cairo"></nz-option>
 
         </nz-select>
       </div>
@@ -123,10 +125,9 @@
         nzAllowClear
         nzPlaceHolder="All"
         [(ngModel)]="tournamentFilter">
-
-          <nz-option nzLabel="Nile League 2025/2026" nzValue="Nile League 2025/2026"></nz-option>
-          <nz-option nzLabel="CAF Confederation Cup 2025/2026" nzValue="CAF Confederation Cup 2025/2026"></nz-option>
-
+          <nz-option [nzLabel]="t('match.match1_tourn')" nzValue="Nile League 2025/2026"></nz-option>
+          <nz-option [nzLabel]="t('match.match4_tourn')" nzValue="CAF Champions Cup 2025/2026"></nz-option>
+          <nz-option [nzLabel]="t('match.match5_tourn')" nzValue="CAF Confederation Cup 2025/2026"></nz-option>
         </nz-select>
       </div>
       <div class="item">
@@ -206,7 +207,7 @@
           <div class="img-con">
             <img src="https://www.tazkarti.com/assets/images/svg/stadium.svg" alt="">
           </div>
-          <p>{{t(match.stadium)}}.<span>{{t(match.city)}}</span></p>
+          <p>{{t(match.stadium)}}<span>{{t(match.city)}}</span></p>
         </div>
         <div class="date item">
           <div class="img-con">
@@ -217,14 +218,16 @@
             <p class="time">{{t(match.time)}}</p>
           </div>
         </div>
-        <button class="btn-lg item">{{ t ('match.book')}}</button>
+        <div class="button-con" nz-button (click)="createMessage('warning')">
+        <button class="btn-lg item" >{{ t ('match.book')}}</button>
+        </div>
         </div>
           <div class="stad-date">
           <div class="stadium item">
           <div class="img-con">
             <img src="https://www.tazkarti.com/assets/images/svg/stadium.svg" alt="">
           </div>
-          <p>{{ t(match.stadium)}}.<span>{{t(match.city)}}</span></p>
+          <p>{{ t(match.stadium)}}<span>{{t(match.city)}}</span></p>
         </div>
         <div class="date item">
           <div class="img-con calender">
@@ -255,9 +258,11 @@
         <div class="state">{{t(match.state)}}</div>
         </div>
       </div>
-      <button class="btn-sm-up">{{t ('match.book')}}</button>
+      <div nz-button (click)="createMessage('warning')">
+        <button class="btn-sm-up" >{{t ('match.book')}}</button>
+      </div>
     </div>
-  </div>
+  </div> 
 </div>
 
 

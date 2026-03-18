@@ -3,15 +3,25 @@ import { Component ,Renderer2} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { Sidebar } from '../service/sidebar';
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMessageService } from 'ng-zorro-antd/message';
 @Component({
   selector: 'app-home',
-  imports: [RouterLink,TranslocoDirective,CommonModule],
+  imports: [RouterLink,TranslocoDirective,CommonModule,NzButtonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
-    // constructor(private sidebar: Sidebar){}
+  Isopendmessage = false
+  openmessage(){
+   this.Isopendmessage = !this.Isopendmessage
+  }
+createMessage(type: string): void {
+  this.message.create(
+    type,
+    this.translocoService.translate('home.message')
+  );
+}
   toggleMenu(){
     this.sidebar.toggleSidebar();
   }
@@ -40,8 +50,9 @@ languages: string[];
 constructor(
   private translocoService: TranslocoService,
   private sidebar: Sidebar,
-  private renderer: Renderer2
-){
+  private renderer: Renderer2,
+  private message: NzMessageService
+){ 
 
   // قراءة اللغة المحفوظة
   const savedLang = localStorage.getItem('lang');

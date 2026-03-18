@@ -293,6 +293,21 @@ header nav ul li p{
     background-color: rgb(173, 173, 173);
     z-index: -1;
 }
+.register .content .info .progress .item .number .complete{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+.register .content .info .progress .item .number .complete i{
+    color: white;
+}
 .register .content .info .progress .item:nth-of-type(1) .number{
     border-color: var(--main-color);
     color: var(--main-color);
@@ -418,7 +433,14 @@ header nav ul li p{
 
 @media  (max-width: 576px){
      .register .content .info .progress{
-        gap: 2.8rem;
+        gap: 2.6rem;
+     }
+     .register .content .info .progress .item .number{
+        font-size: 14px;
+        
+     }
+     .register .content .info .progress .item .number .complete i{
+        font-size: 16px;
      }
      .register .content form .inputs{
         width: 100%;

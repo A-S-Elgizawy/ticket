@@ -520,7 +520,7 @@ nz-select {
     font-weight: 600;
 }
 .match .content .tickets .items button{
-    padding: .5rem 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--main-color);
@@ -528,6 +528,9 @@ nz-select {
     font-weight: bold;
     border: none;
     font-size: 15px;
+}
+.match .content .tickets .items button.btn-lg{
+   padding: .5rem 2rem;
 }
 .match .content .tickets .foo{
     display: flex;
@@ -580,22 +583,7 @@ nz-select {
 .match .content .tickets .items2_2{
     display: none;
 }
-@media  (max-width: 576px){
-    .match .content{
-    padding: 2.5rem 20px;
-}
-.match .content .tickets .foo{
-    width: 100%;
-}
 
-.match .content .tickets .items2_2 p{
-     font-size: 10px;
-}
-.match .content .tickets .items2_2 span{
-     font-size: 10px;
-}
-
-}
 @media  (max-width: 915px){
     .match .content{
     padding: 2.5rem 5%;
@@ -725,6 +713,37 @@ nz-select {
       .match .content .tickets .btn-sm-up{
         display: block;
       }
+}
+@media  (max-width: 576px){
+    .match .content{
+    padding: 2.5rem 20px;
+}
+.match .content .tickets .foo{
+    width: 100%;
+}
+
+.match .content .tickets .items2_2 p{
+     font-size: 10px;
+}
+.match .content .tickets .items2_2 span{
+     font-size: 10px;
+}
+.match .content .tickets .items .date .img-con{
+    width: 24px;
+    height: 35;
+}
+.match .content .tickets .items .date .img-con img{
+    width: 30px;
+    height: 30px;
+}
+.match .content .tickets .items .stadium .img-con{
+    width: 29px;
+    height: 29;
+}
+.match .content .tickets .items .stadium .img-con img{
+    width: 29px;
+    height: 29px;
+}
 }
 /* =========== */
 footer{

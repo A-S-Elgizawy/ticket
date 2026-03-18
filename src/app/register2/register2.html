@@ -90,6 +90,9 @@
             <div class="item">                
                 <div class="number">1
                     <div class="line"></div>
+                    <div class="complete">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">                
@@ -148,7 +151,7 @@
                 <p>{{t ('register2.check3')}}</p>
             </div>
             <div class="btn">
-                <button>{{t ('register2.btnP')}}</button>
+                <button type="button" (click)="createMessage('warning')">{{t ('register2.btnP')}}</button>
                 <button type="button" routerLink="/Register/register1">{{t ('register2.btnB')}}</button>
             </div>
             </div>

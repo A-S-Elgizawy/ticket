@@ -5,15 +5,22 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { RouterLink } from '@angular/router';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-matches',
-  imports: [CommonModule,FormsModule, NzSelectModule,RouterLink,TranslocoDirective],
+  imports: [CommonModule,FormsModule, NzSelectModule,RouterLink,TranslocoDirective,NzButtonModule],
   templateUrl: './matches.html',
   styleUrl: './matches.css',
 })
 export class Matches implements OnInit{
-    // constructor(private sidebar: Sidebar){}
+createMessage(type: string): void {
+  this.message.create(
+    type,
+    this.translocoService.translate('match.message')
+  );
+}
 
   toggleMenu(){
     this.sidebar.toggleSidebar();
@@ -21,87 +28,10 @@ export class Matches implements OnInit{
 
 
   matches = [
-    // {
-    //   "img_team1":"https://www.tazkarti.com/assets/images/imagesref/77379950-aa8c-466a-8ef5-1c36fc1bc777.png",
-    //   "name_team1":"El Gouna FC",
-    //   "img_team2":"https://www.tazkarti.com/assets/images/imagesref/e7a69330-8d11-4f5f-93d1-d72144604165.png",
-    //   "name_team2":"Al-Masry SC",
-    //   "stadium":" Suez Stadium,",
-    //   "city":"Suez ",
-    //   "date":"Tue 10 Mar 2026",
-    //   "time":"Time : 09 : 30 PM",
-    //   "Tournament":"Nile League 2025/2026",
-    //   "Match_No":"143",
-    //   "Group":"Week fifteen",
-    //   "class":"First Stage",
-    //   "state":"Match Ended",
-    //   "state-sign":"red",
-    // },
-    // {
-    //   "img_team1":"https://www.tazkarti.com/assets/images/imagesref/647ec9f6-5104-4cdd-b9ab-7250530be769.png",
-    //   "name_team1":"Enppi SC",
-    //   "img_team2":"https://www.tazkarti.com/assets/images/imagesref/e225bd49-23a2-475d-ac7f-9715c9564856.png",
-    //   "name_team2":"Zamalek SC",
-    //   "stadium":" Arab Contractors Stadium,",
-    //   "city":"Cairo ",
-    //   "date":"Wed 11 Mar 2026",
-    //   "time":"Time : 09 : 30 PM",
-    //   "Tournament":"Nile League 2025/2026",
-    //   "Match_No":"144",
-    //   "Group":"Week fifteen",
-    //   "class":"First Stage",
-    //   "state":"Available",
-    //   "state-sign":"green",
-    // },
-    // {
-    //   "img_team1":"https://www.tazkarti.com/assets/images/imagesref/b23bbdd9-e758-48b4-8572-0d99c69522a4.jpeg",
-    //   "name_team1":"ZED FC",
-    //   "img_team2":"https://www.tazkarti.com/assets/images/imagesref/45aa6e1b-29cc-47e3-a609-000f631ef4ab.jpeg",
-    //   "name_team2":"Modern Sport Club",
-    //   "stadium":" Cairo Int. Stadium,",
-    //   "city":"Cairo ",
-    //   "date":"Wed 11 Mar 2026",
-    //   "time":"Time : 09 : 30 PM",
-    //   "Tournament":"Nile League 2025/2026",
-    //   "Match_No":"145",
-    //   "Group":"Week fifteen",
-    //   "class":"First Stage",
-    //   "state":"Available",
-    //   "state-sign":"green",
-    // },
-    // {
-    //   "match_team1":"https://www.tazkarti.com/assets/images/imagesref/b23bbdd9-e758-48b4-8572-0d99c69522a4.jpeg",
-    //   "name_team1":"ZED FC",
-    //   "img_team2":"https://www.tazkarti.com/assets/images/imagesref/45aa6e1b-29cc-47e3-a609-000f631ef4ab.jpeg",
-    //   "name_team2":"Modern Sport Club",
-    //   "stadium":" Cairo Int. Stadium,",
-    //   "city":"Cairo ",
-    //   "date":"Wed 11 Mar 2026",
-    //   "time":"Time : 09 : 30 PM",
-    //   "Tournament":"CAF Confederation 2025/2026",
-    //   "Match_No":"145",
-    //   "Group":"Week fifteen",
-    //   "class":"First Stage",
-    //   "state":"Available",
-    //   "state-sign":"green",
-    // },
-    // {
-    //   "img_team1":"https://www.tazkarti.com/assets/images/imagesref/b23bbdd9-e758-48b4-8572-0d99c69522a4.jpeg",
-    //   "name_team1":"ZED FC",
-    //   "img_team2":"https://www.tazkarti.com/assets/images/imagesref/45aa6e1b-29cc-47e3-a609-000f631ef4ab.jpeg",
-    //   "name_team2":"Modern Sport Club",
-    //   "stadium":" Cairo Int. Stadium,",
-    //   "city":"Cairo ",
-    //   "date":"Wed 11 Mar 2026",
-    //   "time":"Time : 09 : 30 PM",
-    //   "Tournament":"CAF Champions 2025/2026",
-    //   "Match_No":"145",
-    //   "Group":"Week fifteen",
-    //   "class":"First Stage",
-    //   "state":"Available",
-    //   "state-sign":"green",
-    // },
     {
+      "Team":"Al-Masry SC",
+      "cityFil":"Suez",
+      "tourFil":"Nile League 2025/2026",
       "tournamentName":"Nile League 2025/2026",
       "img_team1":"match.match1_img1",
       "name_team1":"match.match1_name1",
@@ -118,6 +48,9 @@ export class Matches implements OnInit{
       "state":"match.match1_state",
     },
     {
+      "Team":"Enppi SC",
+      "cityFil":"Cairo",
+      "tourFil":"Nile League 2025/2026",
       "tournamentName":"Nile League 2025/2026",
       "img_team1":"match.match2_img1",
       "name_team1":"match.match2_name1",
@@ -134,6 +67,9 @@ export class Matches implements OnInit{
       "state":"match.match2_state",
     },
     {
+      "Team ":"ZED FC",
+      "cityFil":"Cairo",
+      "tourFil":"Nile League 2025/2026",
       "tournamentName":"Nile League 2025/2026",
       "img_team1":"match.match3_img1",
       "name_team1":"match.match3_name1",
@@ -150,6 +86,9 @@ export class Matches implements OnInit{
       "state":"match.match3_state",
     },
     {
+      "Team":"Zamalek SC",
+       "cityFil":"Cairo",
+       "tourFil":"CAF Confederation Cup 2025/2026",
       "tournamentName":"CAF Confederation 2025/2026",
       "img_team1":"match.match5_img1",
       "name_team1":"match.match5_name1",
@@ -166,6 +105,9 @@ export class Matches implements OnInit{
       "state":"match.match5_state",
     },
     {
+      "Team":"Al Ahly SC",
+      "cityFil":"Cairo",
+      "tourFil":"CAF Champions Cup 2025/2026",
       "tournamentName":"CAF Champions 2025/2026",
       "img_team1":"match.match4_img1",
       "name_team1":"match.match4_name1",
@@ -220,12 +162,12 @@ filterMatches() {
 
     const teamMatch =
       !this.teamFilter ||
-      match.name_team1 === this.teamFilter ||
-      match.name_team2 === this.teamFilter;
+      match.Team === this.teamFilter 
+      // match.name_team2 === this.teamFilter;
 
     const stadiumMatch =
       !this.stadiumFilter ||
-      match.city.trim() === this.stadiumFilter;
+      match.cityFil.trim() === this.stadiumFilter;
 
     const groupMatch =
       !this.groupFilter ||
@@ -233,7 +175,7 @@ filterMatches() {
 
     const tournamentMatch =
       !this.tournamentFilter ||
-      match.Tournament === this.tournamentFilter;
+      match.tourFil === this.tournamentFilter;
 
     return teamMatch && stadiumMatch && groupMatch && tournamentMatch;
 
@@ -254,7 +196,8 @@ languages: string[];
 constructor(
   private translocoService: TranslocoService,
   private sidebar: Sidebar,
-  private renderer: Renderer2
+  private renderer: Renderer2,
+  private message: NzMessageService
 ){
 
   // قراءة اللغة المحفوظة

@@ -60,3 +60,12 @@ html[dir="rtl"] .sidebar.active .content .social-home .icon-con.f{
 html[dir="rtl"] .sidebar.active .content .social-home .icon-con.t{
     transform: translate(50px, 39px);
 }
+
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
+    font-size: 12px;
+}

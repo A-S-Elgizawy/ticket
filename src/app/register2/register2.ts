@@ -3,15 +3,21 @@ import { Sidebar } from '../service/sidebar';
 import { RouterLink } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { CommonModule } from '@angular/common';
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMessageService } from 'ng-zorro-antd/message';
 @Component({
   selector: 'app-register2',
-  imports: [RouterLink,TranslocoDirective,CommonModule],
+  imports: [RouterLink,TranslocoDirective,CommonModule,NzButtonModule],
   templateUrl: './register2.html',
   styleUrl: './register2.css',
 })
 export class Register2 {
-    // constructor(private sidebar: Sidebar){}
+createMessage(type: string): void {
+  this.message.create(
+    type,
+    this.translocoService.translate('register2.message')
+  );
+}
   toggleMenu(){
     this.sidebar.toggleSidebar();
   }
@@ -22,7 +28,8 @@ languages: string[];
 constructor(
   private translocoService: TranslocoService,
   private sidebar: Sidebar,
-  private renderer: Renderer2
+  private renderer: Renderer2,
+    private message: NzMessageService
 ){
 
   // قراءة اللغة المحفوظة

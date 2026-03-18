@@ -248,6 +248,15 @@ header nav ul li p{
     padding: .5rem 0 .5rem ;
     margin-bottom: 1rem;
 }
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
+    font-size: 12px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    margin-left: 15px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    padding-left: 15px !important;
+}
 nz-collapse  {
   background-color: transparent;
 }
