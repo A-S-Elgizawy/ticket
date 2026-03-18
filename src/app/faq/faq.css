@@ -256,6 +256,9 @@ header nav ul li p{
     padding: .5rem 0 .5rem ;
     margin-bottom: 1rem;
 }
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+    padding: 12px 0;
+}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
     font-size: 12px;
 }
