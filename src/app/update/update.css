@@ -231,6 +231,14 @@ header nav ul li p{
     }
 
 }
+@media  (max-width: 576px){
+       header .logo{
+        gap: 1rem;
+       }
+       header {
+        padding: 0 3%;
+       }
+}
 .update .update-content{
     /* display: flex;
     justify-content: center;

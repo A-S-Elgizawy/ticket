@@ -232,7 +232,14 @@ header nav ul li p{
     }
 
 }
-
+@media  (max-width: 576px){
+       header .logo{
+        gap: 1rem;
+       }
+       header {
+        padding: 0 3%;
+       }
+}
 .match{
      background-color: rgb(235, 235, 235);
 }

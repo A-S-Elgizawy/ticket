@@ -231,6 +231,14 @@ header nav ul li p{
     }
 
 }
+@media  (max-width: 576px){
+       header .logo{
+        gap: 1rem;
+       }
+       header {
+        padding: 0 3%;
+       }
+}
 .register{
     background-color: rgb(235, 235, 235);
 }
