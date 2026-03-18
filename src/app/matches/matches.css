@@ -724,7 +724,7 @@ nz-select {
 }
 @media  (max-width: 576px){
     .match .content{
-    padding: 2.5rem 20px;
+    padding: 2.5rem 15px;
 }
 .match .content .tickets .foo{
     width: 100%;
