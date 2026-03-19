@@ -13,6 +13,15 @@
   </p>
   </div>
   </div>
+  <div class="page-con" [class.active]="Isopendmessage2">
+    <div class="page">
+    <div class="margin"></div>
+    <p>{{t ('home.telegram2')}}
+    <span class="rega">{{t ('home.rega')}}</span>
+    <span class="back" (click)="openmessage2()">{{t ('home.back')}}</span>
+  </p>
+  </div>
+  </div>
 
 <div class="sidebar" [class.active]="isActive" [class.removeActive]="removeActive">
    <div class="content">
@@ -183,7 +192,7 @@
 </div>
 <footer>
   <p>{{t ('home.p5')}}</p>
-  <p>{{t ('home.p6')}}</p>
+  <p (click)="openmessage2()">{{t ('home.p6')}}</p>
 </footer>
 </div>
 </div>

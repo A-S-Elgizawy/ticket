@@ -16,6 +16,10 @@ export class Home {
   openmessage(){
    this.Isopendmessage = !this.Isopendmessage
   }
+  Isopendmessage2 = false
+  openmessage2(){
+   this.Isopendmessage2 = !this.Isopendmessage2
+  }
 createMessage(type: string): void {
   this.message.create(
     type,
